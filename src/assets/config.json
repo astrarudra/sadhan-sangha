@@ -1,0 +1,12 @@
+
+{
+    "gallery": {
+        "albums": [
+            { 
+                "key": "1",
+                "value": "Album 1"
+            }
+        ],
+        "1": ["jczFxcu.jpg", "V9o5tVZ.jpg", "FHwykZx.jpg", "ZfdJmZR.jpg", "7naNQNB.jpg", "dx3f0Os.jpg", "0qL7UA7.jpg", "9uxlAHJ.jpg", "ikx6A8d.jpg", "n03Qq1v.jpg", "OeFMqqS.jpg", "JY2ig4q.jpg", "FfKlwUe.jpg", "DZIeAgS.jpg", "zVZEvJi.jpg", "pZu6dcV.jpg", "cPFCpLx.jpg", "i7k6aaY.jpg"]
+    }
+}
