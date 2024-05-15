@@ -1,43 +1,59 @@
-import ImageGallery from "react-image-gallery";
-// import stylesheet if you're not already using CSS @import
-import "react-image-gallery/styles/css/image-gallery.css";
-
+import { useState } from 'react';  
+import { Gallery } from "react-grid-gallery";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 const BASE = 'https://i.imgur.com/'
-const IMAGE_COMPO_HEIGHT = 'calc(100vh - 200px)'
 
-// Custom render function to apply styles to images
-
-const renderCustomImage = (item) => {
-    console.log(item)
-    return (
-      <div className="image-gallery-image" style={{ height: IMAGE_COMPO_HEIGHT}}>
-        <img 
-          className="image-height-restrict"
-          src={item.original} 
-          alt={item.description} 
-          style={{ objectFit: 'scale-down', width: '100%'}} // Set objectFit to cover and width/height to 100%
-        />
-      </div>
-    );
-  }
-
-const Gallery = ({gallery}) => {
+const getImages = (gallery) => {
     const { albums } = gallery;
     const selectedAlbum = albums[0];
-    const images = gallery[selectedAlbum.key].map(url => {
-        const [key, ext] = url.split('.')
-        const thumbnail = `${BASE}${key}l.${ext}`
-        const original = `${BASE}${url}`
-        return { original, thumbnail }
-    });
-    return <div style={{ height: IMAGE_COMPO_HEIGHT }}>
-        <ImageGallery 
-        items={images}
-        lazyLoad={true}
-        thumbnailPosition="right"
-        renderItem={renderCustomImage}
-    />;
+    const images = gallery[selectedAlbum.key].map(img => {
+        const {i , h:height , w: width} = img
+        const [key, ext] = i.split('.')
+        const src = `${BASE}${key}l.${ext}` // thumbnail
+        const original = `${BASE}${i}`
+        return { src, original, height, width }
+    }).sort((a, b) => a.height - b.height);
+    return images;
+}
+
+const GPhotosView = ({gallery}) => {
+    const images = getImages(gallery);
+    const [index, setIndex] = useState(-1);
+
+    const currentImage = images[index];
+    const nextIndex = (index + 1) % images.length;
+    const nextImage = images[nextIndex] || currentImage;
+    const prevIndex = (index + images.length - 1) % images.length;
+    const prevImage = images[prevIndex] || currentImage;
+  
+    const handleClick = (index, item) => setIndex(index);
+    const handleClose = () => setIndex(-1);
+    const handleMovePrev = () => setIndex(prevIndex);
+    const handleMoveNext = () => setIndex(nextIndex);
+
+    return <div>
+      <Gallery
+        images={images}
+        onClick={handleClick}
+        enableImageSelection={false}
+        rowHeight={300}
+      />
+      {!!currentImage && (
+        <Lightbox
+          mainSrc={currentImage.original}
+          imageTitle={currentImage.caption}
+          mainSrcThumbnail={currentImage.src}
+          nextSrc={nextImage.original}
+          nextSrcThumbnail={nextImage.src}
+          prevSrc={prevImage.original}
+          prevSrcThumbnail={prevImage.src}
+          onCloseRequest={handleClose}
+          onMovePrevRequest={handleMovePrev}
+          onMoveNextRequest={handleMoveNext}
+        />
+      )}
     </div>
 }
 
-export default Gallery;
+export default GPhotosView;
