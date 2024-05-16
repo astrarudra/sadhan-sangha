@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sadhan Sangha",
+  "name": "Sadhan Sangha Ashram",
+  "description": "Sadhan Sangha Ashram, a non-profit spiritual organization, offers spiritual solace and guidance under the compassionate mentorship of Yogi 108 Swami Sachchidananda Saraswati. Explore our sanctuary for transformative teachings, daily satsangs, and divine wisdom, as we embark on a journey of inner awakening and self-discovery. Join us on the path to spiritual enlightenment and serenity amidst the tranquil embrace of nature at Sadhan Sangha Ashram.",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="79.034 49.6806 308.215 65.1224" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 1509.87px 326.105px;" transform="matrix(0.009734000079, -0.248459026217, 0.601575016975, 0.001256000251, -1259.378906787199, -232.616680256493)" d="M 1426.252 146.062 A 180.545 180.545 0 1 1 1426.252 507.152 A 12538.497 12538.497 0 0 0 1426.252 146.062 Z" bx:shape="crescent 1426.252 326.607 180.545 180 0.504 1@407df28c"/>
+  <rect x="112.736" y="105.544" width="274.513" height="9.259" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, 0, -2.842170943040401e-14)"/>
+  <rect x="230.785" y="49.035" width="5.653" height="19.892" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 233.612px 58.981px;" transform="matrix(0.996959924698, -0.077910013497, 0.077910013497, 0.996959924698, -2.776724912943, 0.835604921449)"/>
+  <rect x="79.034" y="51.423" width="5.321" height="12.524" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, 0, -2.842170943040401e-14)"/>
+  <rect x="249.225" y="56.519" width="5.321" height="12.524" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, 0, -2.842170943040401e-14)"/>
+  <rect x="230.785" y="49.035" width="5.653" height="19.892" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 233.612px 58.981px;" transform="matrix(0.996336936951, 0.085511013865, -0.085511013865, 0.996336936951, 39.001545921027, 0.932922808314)"/>
+  <rect x="206.253" y="59.362" width="5.321" height="12.524" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 208.913px 65.624px;" transform="matrix(0.983856141567, -0.178963035345, 0.178963035345, 0.983856141567, -1.189899201041, 0.693631779298)"/>
+  <rect x="291.287" y="59.616" width="5.321" height="12.524" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 293.947px 65.878px;" transform="matrix(0.98256701231, 0.185908004642, -0.185908004641, 0.98256701231, 0.092117013883, 0.279084918847)"/>
+  <rect x="230.785" y="49.035" width="5.653" height="19.892" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 233.612px 58.981px;" transform="matrix(0.956715106964, -0.291025996208, 0.291025996208, 0.956715106964, -49.925256611186, 9.157203037519)"/>
+  <rect x="230.785" y="49.035" width="5.653" height="19.892" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 233.612px 58.981px;" transform="matrix(0.958144128323, 0.286285996437, -0.286285996437, 0.958144128323, 83.473144635739, 8.94039347957)"/>
+</svg>
