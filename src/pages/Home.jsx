@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Box from '@mui/material/Box';
-import { ReactComponent as DividerSVG } from '../assets/divider.svg';
 import { GurujiSection, AshramSection, SatsangSection, FollowUsSection } from '../components/HomeSections'
+import { SSADivider } from '../components/UIElements';
 
 const Home = () => {
     const [winWidth, setWinWidth] = useState(window.innerWidth);
@@ -22,16 +21,16 @@ const Home = () => {
         <div style={{display: 'flex', justifyContent: "center"}}>
             <div style={{maxWidth: '1000px', textAlign: "center"}}>
                 <GurujiSection wFactor={wFactor} />
-                <Box className="svg-divider" sx={{pt: '15px'}}><DividerSVG /></Box>
-                <Box className="font-freeman" style={{color: '#464038'}}><h1>Sadhan Sangha Ashram</h1></Box>
+                <SSADivider />
+                <h1>Sadhan Sangha Ashram</h1>
                 <AshramSection />
-                <Box className="svg-divider" sx={{pt: '15px'}}><DividerSVG /></Box>
-                <Box className="font-freeman" style={{color: '#464038'}}><h1>Satsang</h1></Box>
+                <SSADivider />
+                <h1>Satsang</h1>
                 <SatsangSection />
-                <Box className="svg-divider" sx={{pt: '15px'}}><DividerSVG /></Box>
-                <Box className="font-freeman" style={{color: '#464038'}}><h1>Follow Us</h1></Box>
+                <SSADivider />
+                <h1>Follow Us</h1>
                 <FollowUsSection />
-                <Box className="svg-divider" sx={{pt: '15px'}}><DividerSVG /></Box>
+                <SSADivider />
             </div>
         </div>
     );

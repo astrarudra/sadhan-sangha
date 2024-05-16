@@ -9,6 +9,15 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
+const formatConfig = (configJson) => {
+  const { gallery } = configJson
+  const { albums } = gallery;
+  Object.keys(albums).forEach((key) => {
+    albums[key].key = key;
+  })
+  return configJson
+}
+
 function shallow(objA, objB) {
     if (Object.is(objA, objB)) {
       return true;
@@ -56,7 +65,7 @@ const storeLocal = (s) => saveState(forLocal(s))
 
 export const useStore = createWithEqualityFn(immer((set) => ({
     version: 1,
-    config: configJson,
+    config: formatConfig(configJson),
     pages: {
       ashram: { name: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
       satsang: { name: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },

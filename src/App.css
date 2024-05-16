@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+/* Base Class */
+
+.d-flex {
+  display: flex;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.f1 {
+  flex: 1;
+}
+
 /* Image Effect - reference - https://codepen.io/nxworld/pen/ZYNOBZ */
 
 figure {
@@ -74,6 +89,8 @@ figure {
   height: 35px;
   text-align: center;
 }
+
+/* Generic Styles */
 
 .ashram-text {
   color: #50453b;
@@ -134,4 +151,20 @@ figure {
     background: linear-gradient(0deg, rgba(46, 28, 130, 1) 0%, rgba(66, 0, 252, 1) 50%);
     color: white;
     border-radius: 12px;
+}
+
+.logo-wrap {
+  height: inherit;
+  width: 100%;
+  background: #ffffffd1;
+  border-radius: 50%;
+}
+.logo-wrap svg #ssa-body{
+  fill: #796b5d
+}
+
+.card {
+  padding: 20px;
+  background: #fff0e4;
+  border-radius: 12px;
 }

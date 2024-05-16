@@ -13,9 +13,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoIcon } from '../assets/logo.svg';
-import ResponsiveTypography from './ResponsiveText';
-
+import { SSALogoIcon, ResponsiveTypography } from './UIElements';
 
 const drawerWidth = 240;
 
@@ -29,7 +27,7 @@ const DrawerAppBar = ({pages}) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{backgroundColor: '#fff1e4', color: '#464038', height: '100vh'}}>
       <Typography className="font-freeman" variant="h6" sx={{ py: 2, pl: 2}}>
-        SSA - Menu
+        Sadhan Sangha - Menu
       </Typography>
       <Divider />
       <List>
@@ -56,7 +54,9 @@ const DrawerAppBar = ({pages}) => {
           <Link to={'/home'} style={{textDecoration: "none", color: "inherit"}}>
             <div style={{display: 'flex', alignItems: "center"}}>
               <div style={{height: '48px', marginRight: '10px'}}>
-                <LogoIcon />
+                <div className='logo-wrap'>
+                  <SSALogoIcon />
+                </div>
               </div>
               <ResponsiveTypography className="font-freeman" mdText="Sadhan Sangha Ashram" xsText="Sadhan Sangha" variant="h6" component="div"/>
             </div>

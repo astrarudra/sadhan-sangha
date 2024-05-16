@@ -4,10 +4,8 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 const BASE = 'https://i.imgur.com/'
 
-const getImages = (gallery) => {
-    const { albums } = gallery;
-    const selectedAlbum = albums[0];
-    const images = gallery[selectedAlbum.key].map(img => {
+const formatImages = (imgurUUIDs) => {
+    const images = imgurUUIDs.map(img => {
         const {i , h:height , w: width} = img
         const [key, ext] = i.split('.')
         const src = `${BASE}${key}l.${ext}` // thumbnail
@@ -17,8 +15,8 @@ const getImages = (gallery) => {
     return images;
 }
 
-const GPhotosView = ({gallery}) => {
-    const images = getImages(gallery);
+const ImgurViewer = ({images: imgurUUIDs}) => {
+    const images = formatImages(imgurUUIDs);
     const [index, setIndex] = useState(-1);
 
     const currentImage = images[index];
@@ -56,4 +54,4 @@ const GPhotosView = ({gallery}) => {
     </div>
 }
 
-export default GPhotosView;
+export default ImgurViewer;

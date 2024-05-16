@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ResponsiveTypography from '../components/ResponsiveText';
+import { ResponsiveTypography } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 const w1 = 335;
@@ -142,11 +142,6 @@ export const FollowUsSection = () => {
                 </div>
                 <ResponsiveTypography mdText="Amazon Prime Music" smText="Music"  className="font-freeman" sx={{fontSize: '20px'}}/>
             </div>
-
-            
-            {/* <Icon icon="logos:youtube-icon" style={{paddingRight: '10px'}}/>
-            <Icon icon="logos:spotify-icon" style={{paddingRight: '10px'}} /> 
-            <Icon icon="simple-icons:amazonprime" /> */}
         </div>
     )
 }
