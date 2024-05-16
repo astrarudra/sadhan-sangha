@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
+    "@iconify/react": "^4.1.1"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -17,6 +18,7 @@
     "react-dom": "^18.3.1",
     "react-grid-gallery": "^1.0.1",
     "react-image-lightbox": "^5.1.4",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "zustand": "^4.5.2"
