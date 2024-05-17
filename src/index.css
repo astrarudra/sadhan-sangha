@@ -1,12 +1,27 @@
+:root {
+  --default-100: #fff1e4;
+  --default-200: #bda894;
+  --default-250: #978575;
+  --default-300: #464038;
+  --orange-500: #c96a14;
+
+  --bg: var(--default-200);
+  --text: var(--default-300);
+  --bg-dark: var(--default-300);
+  --text-dark: var(--default-200);
+  --text-mid: var(--default-250);
+  --footer-header: var(--orange-500);
+}
+
 body {
   margin: 0;
-  background-color: #bda894;
+  background-color: var(--bg);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(70, 64, 56)
+  color: var(--text)
 }
 
 .font-freeman, h1, h2 {

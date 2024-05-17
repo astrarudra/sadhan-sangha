@@ -6,39 +6,7 @@ import Button from '@mui/material/Button';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ResponsiveTypography } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-
-const w1 = 335;
-const w2 = 355;
-const w3 = 310;
-
-const primaryImgs = [
-    {
-        src: "https://i.imgur.com/dSGzChL.jpg",
-        alt: "Guruji",
-        height: w1 * 1.29,
-        width: w1,
-        
-    },
-    {
-        src: "https://i.imgur.com/GtJ3TKa.jpg",
-        alt: "Param Guruji",
-        height: w2 * 1.29,
-        width: w2,
-    },
-    {
-        src: "https://i.imgur.com/wjB9qkj.jpg",
-        alt: "Mataji",
-        height: w3 * 1.29,
-        width: w3,
-    }
-]
-
-const socialLinks = {
-    fb: "https://facebook.com/SadhanSangha",
-    yt: "https://youtube.com/@SadhanSangha",
-    sp: "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv",
-    ap: "https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"
-}
+import { socialLinks, primaryImgs } from '../constants';
 
 export const GurujiSection = ({wFactor}) => {
     return <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
@@ -81,7 +49,7 @@ export const SatsangSection = () => {
     return (
     <div style={{position: 'relative'}}>
         <div style={{display: 'flex'}}>
-            <div style={{width:"50%", paddingRight: '10px', cursor: "pointer"}} onClick={() => window.open(socialLinks.yt, "_blank")}>
+            <div style={{width:"50%", paddingRight: '10px', cursor: "pointer"}} onClick={() => window.open(socialLinks.yt.l, "_blank")}>
                 <div className="iframe-header font-freeman">
                     <Icon icon="logos:youtube-icon" style={{paddingRight: '10px'}}/>
                     <ResponsiveTypography mdText="Listen on Youtube" xsText=""  className="font-freeman"/>
@@ -90,7 +58,7 @@ export const SatsangSection = () => {
                 </div>
                 <iframe width="100%" height="352" title="YouTube Satsang Playlist" frameborder="0" src="https://www.youtube.com/embed/videoseries?si=KKcbbq8bfewEJ6F_&amp;list=PL_MOImlZCzxj05BtkOrCvyrhHOnQVU1o-" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div style={{width:"50%", cursor: "pointer"}} onClick={() => window.open(socialLinks.sp, "_blank")}>
+            <div style={{width:"50%", cursor: "pointer"}} onClick={() => window.open(socialLinks.sp.l, "_blank")}>
                 <div className="iframe-header font-freeman"> 
                     <Icon icon="logos:spotify-icon" style={{paddingRight: '10px'}} /> 
                     <ResponsiveTypography mdText="Listen on Spotify" xsText=""  className="font-freeman"/>
@@ -122,25 +90,25 @@ export const SatsangSection = () => {
 export const FollowUsSection = () => {
     return (
         <div style={{display: "flex", padding: '15px 0px'}}>
-            <div class="follow-logo" onClick={() => window.open(socialLinks.fb, "_blank")}>
-                <Icon icon="logos:facebook" style={{fontSize: '64px'}}/>
-                <div className="font-freeman">Facebook</div>
+            <div class="follow-logo" onClick={() => window.open(socialLinks.fb.l, "_blank")}>
+                <Icon icon={socialLinks.fb.i} style={{fontSize: '64px'}}/>
+                <div className="font-freeman">{socialLinks.fb.n}</div>
             </div>
-            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.yt, "_blank")}>
-                <Icon icon="logos:youtube-icon" style={{fontSize: '64px'}}/>
-                <div className="font-freeman">Youtube</div>
+            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.yt.l, "_blank")}>
+                <Icon icon={socialLinks.yt.i} style={{fontSize: '64px'}}/>
+                <div className="font-freeman">{socialLinks.yt.n}</div>
             </div>
-            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.sp, "_blank")}>
-                <Icon icon="logos:spotify-icon" style={{fontSize: '64px'}}/>
-                <div className="font-freeman">Spotify</div>
+            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.sp.l, "_blank")}>
+                <Icon icon={socialLinks.sp.i} style={{fontSize: '64px'}}/>
+                <div className="font-freeman">{socialLinks.sp.n}</div>
             </div>
-            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.ap, "_blank")}>
+            <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(socialLinks.ap.l, "_blank")}>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                     <div className="prime-music">
-                        <Icon icon="simple-icons:prime" style={{fontSize: '50px'}}/>
+                        <Icon icon={socialLinks.ap.i} style={{fontSize: '50px'}}/>
                     </div>
                 </div>
-                <ResponsiveTypography mdText="Amazon Prime Music" smText="Music"  className="font-freeman" sx={{fontSize: '20px'}}/>
+                <ResponsiveTypography mdText={socialLinks.ap.n} smText={socialLinks.ap.n2}  className="font-freeman" sx={{fontSize: '20px'}}/>
             </div>
         </div>
     )

@@ -4,8 +4,8 @@ import { ReactComponent as SSADividerSVG } from '../assets/ssaDivider.svg';
 import { ReactComponent as SSALogo } from '../assets/ssaLogo.svg';
 
 console.log(SSALogo);
-export const SSALogoIcon = () => {
-    return <div className='logo-wrap'>
+export const SSALogoIcon = ({variant = 'variant-brown'}) => {
+    return <div className={`logo-wrap ${variant}`}>
         <SSALogo />
     </div>
 }

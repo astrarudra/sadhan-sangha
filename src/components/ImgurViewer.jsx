@@ -4,28 +4,29 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 const BASE = 'https://i.imgur.com/'
 
-const formatImages = (imgurUUIDs) => {
+const formatImages = (imgurUUIDs, sort) => {
     const images = imgurUUIDs.map(img => {
         const {i , h:height , w: width} = img
         const [key, ext] = i.split('.')
         const src = `${BASE}${key}l.${ext}` // thumbnail
         const original = `${BASE}${i}`
         return { src, original, height, width }
-    }).sort((a, b) => a.height - b.height);
+    })
+    if(sort) images.sort((a, b) => a.height - b.height);
     return images;
 }
 
-const ImgurViewer = ({images: imgurUUIDs}) => {
-    const images = formatImages(imgurUUIDs);
+const ImgurViewer = ({images: imgurUUIDs, sort=true, ...props}) => {
+    const images = formatImages(imgurUUIDs, sort);
     const [index, setIndex] = useState(-1);
-
+    console.log(props, "props")
     const currentImage = images[index];
     const nextIndex = (index + 1) % images.length;
     const nextImage = images[nextIndex] || currentImage;
     const prevIndex = (index + images.length - 1) % images.length;
     const prevImage = images[prevIndex] || currentImage;
   
-    const handleClick = (index, item) => setIndex(index);
+    const handleClick = (index) => setIndex(index);
     const handleClose = () => setIndex(-1);
     const handleMovePrev = () => setIndex(prevIndex);
     const handleMoveNext = () => setIndex(nextIndex);
@@ -36,6 +37,7 @@ const ImgurViewer = ({images: imgurUUIDs}) => {
         onClick={handleClick}
         enableImageSelection={false}
         rowHeight={300}
+        {...props}
       />
       {!!currentImage && (
         <Lightbox

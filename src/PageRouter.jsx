@@ -26,6 +26,7 @@ const App = () => {
           console.log(page)
           return <Route key={page.path} path={page.path} component={componentMap[page.name]} />
         })}
+        <Route path="/" component={Home} />
       </Switch>
     </div>
   );

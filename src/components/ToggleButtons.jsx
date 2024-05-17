@@ -15,7 +15,7 @@ export const ToggleButtons = ({selected, list, onChange, label = "Albums"}) => {
       ariel-label={label}
     >
         {list.map((item, i) => {
-            return <ToggleButton key={item.key} value={item.key} sx={{textTransform: 'capitalize'}} color="success" size="large" variant="contained"> 
+            return <ToggleButton key={item.key} value={item.key} sx={{textTransform: 'capitalize'}} color="success" size="large"> 
               {item.value}
               </ToggleButton>
         })}

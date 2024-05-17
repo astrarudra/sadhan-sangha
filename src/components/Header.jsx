@@ -14,8 +14,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { SSALogoIcon, ResponsiveTypography } from './UIElements';
-
-const drawerWidth = 240;
+import { drawerWidth } from '../constants'
 
 const DrawerAppBar = ({pages}) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -32,7 +31,6 @@ const DrawerAppBar = ({pages}) => {
       <Divider />
       <List>
         {Object.keys(pages).map((key) => {
-          if(key === 'home') return null
           const { name, path, Icon } = pages[key]
           return <ListItem key={key} disablePadding>
             <ListItemButton component="a" href={path}>
@@ -51,7 +49,7 @@ const DrawerAppBar = ({pages}) => {
     <Box sx={{ display: 'flex', height: '64px' }}>
       <AppBar component="nav" sx={{backgroundColor: '#fff1e4', color: '#464038'}}>
         <Toolbar>
-          <Link to={'/home'} style={{textDecoration: "none", color: "inherit"}}>
+          <Link to={'/'} style={{textDecoration: "none", color: "inherit"}}>
             <div style={{display: 'flex', alignItems: "center"}}>
               <div style={{height: '48px', marginRight: '10px'}}>
                 <div className='logo-wrap'>
@@ -64,7 +62,6 @@ const DrawerAppBar = ({pages}) => {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {Object.keys(pages).map((key) => {
-              if(key === 'home') return null
               const { name, path, Icon } = pages[key]
               return <Link to={path}>
                 <Button key={name} sx={{ color: '#464038', textTransform: 'Capitalize', ml: "5px" }} startIcon={<Icon style={{ color: '#bea894' }}/>}>

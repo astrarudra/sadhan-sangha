@@ -67,11 +67,11 @@ export const useStore = createWithEqualityFn(immer((set) => ({
     version: 1,
     config: formatConfig(configJson),
     pages: {
+      home: { name: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
       ashram: { name: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
       satsang: { name: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
       gallery: { name: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
       contact: { name: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
-      home: { name: 'Home', path: '/', icon: <HomeIcon /> },
     },
     setState: (payload) => set((s) => {
         console.log(payload, "PAYLOAD: setState")
