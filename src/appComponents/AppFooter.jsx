@@ -2,12 +2,10 @@ import React from 'react';
 import { SSALogoIcon } from '../components/UIElements';
 import { useStore } from '../appStore';
 import { Link } from 'react-router-dom';
-import { socialLinks, contactDetails } from '../constants';
+import ReachUs from "../components/ReachUs"
+import { socialLinks } from '../constants';
 import { Icon } from '@iconify/react';
 import Box from '@mui/material/Box';
-import PlaceIcon from '@mui/icons-material/Place';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
 
 const thisYear = new Date().getFullYear()
 const NoWrap = ({children}) => <span style={{whiteSpace: 'nowrap'}}>{children}</span>
@@ -60,24 +58,6 @@ const FooterNavigation = ({pages}) => {
     </div>
 }
 
-const FooterReachUs = () => {
-    return (<div style={{ padding: '0px 20px', maxWidth: '180px'}}>
-        <div className="footer-header"> Reach Us </div>
-        <div className="v-center footer-social" style={{alignItems: 'normal'}}>
-            <PlaceIcon className="footer-social-icons" style={{height: '100%', color: 'red'}}/>
-            <div>{contactDetails.location}</div>
-        </div>
-        <div className="v-center footer-social">
-            <PhoneIcon className="footer-social-icons" style={{color: 'green'}}/>
-            <div>{contactDetails.phone}</div>
-        </div>
-        <div className="v-center footer-social">
-            <EmailIcon className="footer-social-icons" />
-            <div>{contactDetails.email}</div>
-        </div> 
-    </div>
-    )
-}
 const FooterFollowUs = () => {
     return <div>
         <div className="footer-header"> Follow Us </div>
@@ -100,8 +80,12 @@ const Footer = () => {
                 <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
                     <div className="d-flex" style={{zIndex: 1, width: '100%', maxWidth: '850px' }}>
                         <FooterNavigation pages={pages} />
+                        <Box sx={{display: responsiveStyle.display, padding: '0px 20px'}}>
+                            <div className="footer-header"> Download App </div>
+                            <div className="v-center footer-social"> Coming Soon </div>
+                        </Box>
                         <div className="d-flex" style={{marginLeft: 'auto'}}>
-                            <FooterReachUs />
+                            <ReachUs />
                             <FooterFollowUs />
                         </div>
                     </div>

@@ -47,7 +47,7 @@ const DrawerAppBar = ({pages}) => {
 
   return (
     <Box sx={{ display: 'flex', height: '64px' }}>
-      <AppBar component="nav" sx={{backgroundColor: '#fff1e4', color: '#464038'}}>
+      <AppBar component="nav" sx={{backgroundColor: '#fff1e4', color: '#464038', zIndex: 1}}>
         <Toolbar>
           <Link to={'/'} style={{textDecoration: "none", color: "inherit"}}>
             <div style={{display: 'flex', alignItems: "center"}}>

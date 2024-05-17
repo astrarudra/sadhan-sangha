@@ -36,6 +36,6 @@ export const socialLinks = {
 export const contactDetails = {
     location: "Sadhan Sangha Ashram, Haridwar Road, Veerbhadra, Rishikesh, Uttarakhand 249202",
     gmap: "https://maps.app.goo.gl/fmuSMohkJcgPf7YR7",
-    phone: "+91 135 2452522",
+    phone: "+91 135 2452522", 
     email: "contact@sadhansangha.org",
 }

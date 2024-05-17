@@ -85,9 +85,13 @@ figure {
 }
 
 .svg-divider {
-  fill: #fff0e4;
+  fill: var(--text-light);
   height: 35px;
   text-align: center;
+}
+
+.dark-varient {
+  fill: var(--text-dark);
 }
 
 /* Generic Styles */
@@ -173,6 +177,17 @@ figure {
   padding: 20px;
   background: #fff0e4;
   border-radius: 12px;
+}
+
+.contact-parent {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.contact-icon {
+  font-size: 35px !important;
+  padding-right: 10px;
+  filter: grayscale(30%);
 }
 
 /* Footer */

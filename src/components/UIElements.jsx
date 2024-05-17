@@ -35,5 +35,12 @@ export const ResponsiveElement = ({ mdEl, smEl, xsEl, sx = {}, ...props }) => {
     );
 }
 
-export const SSADivider = () => <Box className="svg-divider" sx={{pt: '15px'}}><SSADividerSVG /></Box>
+export const SSADivider = ({className = "svg-divider"}) => <Box className={className} sx={{p: '15px'}}><SSADividerSVG /></Box>
 
+export const BoxFixedWidth = ({children}) => (
+    <div style={{display: 'flex', justifyContent: "center"}}>
+        <div style={{maxWidth: '1000px', textAlign: "center"}}>
+            {children}
+        </div>
+    </div>
+)

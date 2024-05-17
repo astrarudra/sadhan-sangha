@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import Box from '@mui/material/Box';
 import { FollowUsSection } from '../components/HomeSections'
-import { SSADivider } from '../components/UIElements';
+import { SSADivider, BoxFixedWidth } from '../components/UIElements';
 import { useStore } from '../appStore';
 import Button from '@mui/material/Button';
 import ImgurViewer from '../components/ImgurViewer';
@@ -47,11 +47,15 @@ export const AshramSection = () => {
                     </div>
                 </div>
                 <Box ref={textRef} sx={{textAlign: 'left', flex: 1, paddingLeft: '15px', height: "max-content"}}>
-                    Discover serenity and spiritual guidance nestled between the enchanting realms of Rishikesh and Haridwar at Sadhan Sangha Ashram. Here, amidst the tranquil embrace of nature, seekers find solace and wisdom under the compassionate guidance of the venerable Yogi 108 Swami Sachchidananda Saraswati.<br /><br />
-                    In the mystical year of 1970, the revered Swami embarked on a pilgrimage through North India. Entranced by the celestial beauty of the region between Haridwar and Rishikesh, he felt a profound connection to the divine essence, envisioning it as the very abode of Lord Shiva himself. Inspired by this divine encounter, Swami Sachchidananda Saraswati resolved to establish an Ashram near the Virbhadra railway station, expressing his gratitude to his devoted disciples, Choudhury Saheb and Kapoor Saheb.<br /><br />
-                    The journey of Sadhan Sangha Ashram began as a humble cottage with a solitary well beside it when Swami Sachchidananda Saraswati first graced its grounds in 1979. Over the years, with unwavering dedication and divine grace, the Ashram blossomed into a sanctuary of spiritual nourishment and inner peace.<br /><br />
-                    In the auspicious year of 1984, the Mandir within the Ashram was consecrated, marking a sacred milestone in its journey. The statue of Guruji was unveiled on the sacred day of 2nd November, symbolizing the eternal presence of wisdom and enlightenment within these hallowed grounds.<br /><br />
-                    Today, under the guidance of the present Guruji, Sadhan Sangha Ashram continues to illuminate the path of seekers, offering a haven for spiritual growth and self-discovery. Whether you seek refuge, seek wisdom, or simply seek solace amidst the chaos of life, the gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul.
+                    <SSADivider className='svg-divider dark-varient'/>
+                    <div>
+                        Discover serenity and spiritual guidance nestled between the enchanting realms of Rishikesh and Haridwar at Sadhan Sangha Ashram. Here, amidst the tranquil embrace of nature, seekers find solace and wisdom under the compassionate guidance of the venerable Yogi 108 Swami Sachchidananda Saraswati.<br /><br />
+                        In the mystical year of 1970, the revered Swami embarked on a pilgrimage through North India. Entranced by the celestial beauty of the region between Haridwar and Rishikesh, he felt a profound connection to the divine essence, envisioning it as the very abode of Lord Shiva himself. Inspired by this divine encounter, Swami Sachchidananda Saraswati resolved to establish an Ashram near the Virbhadra railway station, expressing his gratitude to his devoted disciples, Choudhury Saheb and Kapoor Saheb.<br /><br />
+                        The journey of Sadhan Sangha Ashram began as a humble cottage with a solitary well beside it when Swami Sachchidananda Saraswati first graced its grounds in 1979. Over the years, with unwavering dedication and divine grace, the Ashram blossomed into a sanctuary of spiritual nourishment and inner peace.<br /><br />
+                        In the auspicious year of 1984, the Mandir within the Ashram was consecrated, marking a sacred milestone in its journey. The statue of Guruji was unveiled on the sacred day of 2nd November, symbolizing the eternal presence of wisdom and enlightenment within these hallowed grounds.<br /><br />
+                        Today, under the guidance of the present Guruji, Sadhan Sangha Ashram continues to illuminate the path of seekers, offering a haven for spiritual growth and self-discovery. Whether you seek refuge, seek wisdom, or simply seek solace amidst the chaos of life, the gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul.
+                    </div>
+                    <SSADivider className='svg-divider dark-varient'/>
                 </Box>
             </div>
         </div>
@@ -60,16 +64,14 @@ export const AshramSection = () => {
 
 const AshramPage = () => {
     return (
-        <div style={{display: 'flex', justifyContent: "center"}}>
-            <div style={{maxWidth: '1000px', textAlign: "center"}}>
-                <h1>The Ashram</h1>
-                <AshramSection />
-                <SSADivider />
-                <h1>Follow Us</h1>
-                <FollowUsSection />
-                <SSADivider />
-            </div>
-        </div>
+        <BoxFixedWidth>
+            <h1>The Ashram</h1>
+            <AshramSection />
+            <SSADivider />
+            <h1>Follow Us</h1>
+            <FollowUsSection />
+            <SSADivider />
+        </BoxFixedWidth>
     );
 };
 

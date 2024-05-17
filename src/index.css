@@ -9,6 +9,7 @@
   --text: var(--default-300);
   --bg-dark: var(--default-300);
   --text-dark: var(--default-200);
+  --text-light: var(--default-100);
   --text-mid: var(--default-250);
   --footer-header: var(--orange-500);
 }
