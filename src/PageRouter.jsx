@@ -6,6 +6,7 @@ import Ashram from './pages/Ashram';
 import Satsang from './pages/Satsang';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 
 const componentMap = {
   Home,
@@ -13,6 +14,7 @@ const componentMap = {
   Satsang,
   Gallery,
   Contact,
+  Privacy
 };
 
 const App = () => {

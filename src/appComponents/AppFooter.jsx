@@ -31,14 +31,22 @@ const FooterImgaes = () => {
 
 const FooterBottomSection = () => {
     return <div className="footer-bottom">
-        <div style={{width: 'calc(50% - 172px', minWidth: "50px", textAlign: 'left', padding: "10px 15px"}}> 
-            Developed By <NoWrap>Rudra Roy</NoWrap>
+        <div style={{width: 'calc(50% - 172px)', minWidth: "50px", textAlign: 'left'}}>
+            <a href="https://github.com/astrarudra/sadhan-sangha" target="_blank" rel="noopener noreferrer" className="link">
+                <div style={{padding: "10px 15px"}}>
+                    Developed By <NoWrap>Rudra Roy</NoWrap>
+                </div>
+            </a>
         </div>
         <div>
             {`© 2005 - ${thisYear}`} Sadhan Sangha Ashram. All Rights Reserved.
         </div>
-        <div style={{marginLeft: "auto", padding: "10px 15px"}}>
-            Privacy Policy
+        <div style={{marginLeft: "auto"}}>
+            <Link to="/privacy" className="link">
+                <div style={{padding: "10px 15px"}}>
+                    Privacy Policy
+                </div>
+            </Link>
         </div>
     </div>
 }
@@ -48,7 +56,7 @@ const FooterNavigation = ({pages}) => {
          <div className="footer-header"> Navigation </div>
         {Object.keys(pages).map((key) => {
             const { name, path, Icon } = pages[key]
-            return <Link to={path} style={{textDecoration: "none", color: "inherit"}}>
+            return <Link to={path}  className="link">
                 <div className="v-center footer-social">
                     <Icon className="footer-social-icons" />
                     <div>{name}</div>

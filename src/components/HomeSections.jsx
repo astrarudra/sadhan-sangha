@@ -96,9 +96,9 @@ export const FollowUsSection = () => {
                     <div className="font-freeman">{yt.n}</div>
                 </div>
             </div>
-            <div style={{width: '0px', height: '10px'}}></div>
+            <div style={{width: '10px', height: '10px'}}></div>
             <div className="d-flex f1">
-                <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(sp.l, "_blank")}>
+                <div class="follow-logo" onClick={() => window.open(sp.l, "_blank")}>
                     <Icon icon={sp.i} style={{fontSize: '64px'}}/>
                     <div className="font-freeman">{sp.n}</div>
                 </div>

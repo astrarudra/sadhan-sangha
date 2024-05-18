@@ -72,6 +72,7 @@ export const useStore = createWithEqualityFn(immer((set) => ({
       satsang: { name: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
       gallery: { name: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
       contact: { name: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
+      privacy: { name: 'Privacy', path: '/privacy', Icon: (p) => <AlternateEmailIcon {...p} />, hidden: true },
     },
     setState: (payload) => set((s) => {
         console.log(payload, "PAYLOAD: setState")

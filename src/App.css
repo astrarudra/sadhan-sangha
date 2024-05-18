@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;    
+  width: max-content;
+  display: block;
+}
+
+.link:hover {
+  color: var(--orange-500);
+}
+
 /* Base Class */
 
 .d-flex {

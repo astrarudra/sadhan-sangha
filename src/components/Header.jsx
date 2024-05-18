@@ -31,7 +31,8 @@ const DrawerAppBar = ({pages}) => {
       <Divider />
       <List>
         {Object.keys(pages).map((key) => {
-          const { name, path, Icon } = pages[key]
+          const { name, path, Icon, hidden } = pages[key]
+          if(hidden === true) return null
           return <ListItem key={key} disablePadding>
             <ListItemButton component="a" href={path}>
               <Icon/>
@@ -62,7 +63,8 @@ const DrawerAppBar = ({pages}) => {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {Object.keys(pages).map((key) => {
-              const { name, path, Icon } = pages[key]
+              const { name, path, Icon, hidden } = pages[key]
+              if(hidden === true) return null
               return <Link to={path}>
                 <Button key={name} sx={{ color: '#464038', textTransform: 'Capitalize', ml: "5px" }} startIcon={<Icon style={{ color: '#bea894' }}/>}>
                   {name}
