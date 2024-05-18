@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import ImgurViewer from '../components/ImgurViewer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Link } from 'react-router-dom';
+import { imgurImages } from '../constants';
 
 const calcMaxRows = (clientHeight) => {
     return parseInt(clientHeight / 250);
@@ -49,7 +50,7 @@ export const AshramSection = () => {
 
     return <div style={{position: 'relative'}}>
         <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
-            <figure><img src="https://i.imgur.com/0fOBbqh.jpg" alt="Ashram" style={{width: '100%'}}/></figure>
+            <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>
         </div>
         <div style={{padding: '40px 0px'}}>
             <Box className="card">

@@ -3,11 +3,10 @@ import Box from '@mui/material/Box';
 import { ReactComponent as SSADividerSVG } from '../assets/ssaDivider.svg';
 import { ReactComponent as SSALogo } from '../assets/ssaLogo.svg';
 
-console.log(SSALogo);
-export const SSALogoIcon = ({variant = 'variant-brown'}) => {
-    return <div className={`logo-wrap ${variant}`}>
+export const SSALogoIcon = ({variant = 'variant-brown', sx}) => {
+    return <Box className={`logo-wrap ${variant}`} sx={sx}>
         <SSALogo />
-    </div>
+    </Box>
 }
 
 export const ResponsiveTypography = ({ mdText, smText, xsText, sx = {}, ...props }) => {
@@ -25,7 +24,6 @@ export const ResponsiveTypography = ({ mdText, smText, xsText, sx = {}, ...props
 export const ResponsiveElement = ({ mdEl, smEl, xsEl, sx = {}, ...props }) => {
     if(smEl === undefined) smEl = mdEl;
     if(xsEl === undefined) xsEl = smEl;
-    console.log(mdEl, smEl, xsEl, props, sx)
     return (
         <>
             <Box {...props} sx={{ display: { xs: 'none', sm: 'none', md: 'block', ...sx } }}>{mdEl}</Box>

@@ -25,7 +25,6 @@ const App = () => {
       <Switch>
         {Object.keys(pages).map((key) => {
           const page = pages[key]
-          console.log(page)
           return <Route key={page.path} path={page.path} component={componentMap[page.name]} />
         })}
         <Route path="/" component={Home} />

@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
 import { ResponsiveTypography, SSADivider } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { socialLinks, primaryImgs } from '../constants';
+import { socialLinks, primaryImgs, imgurImages } from '../constants';
 import { YTHeader, YTIFrame } from './YTComponents';
 
 export const GurujiSection = ({wFactor}) => {
@@ -30,11 +30,10 @@ export const AshramSection = () => {
     return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}}>
     <div style={{position: 'relative'}}>
         <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
-            <figure><img src="https://i.imgur.com/0fOBbqh.jpg" alt="Ashram" style={{width: '100%'}}/></figure>
+            <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>
         </div>
         <Box className="ashram-text">
-            Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment nestled between the sacred towns of Rishikesh and Haridwar. <br/>
-            Our story is one of divine inspiration and humble beginnings, guided by the luminous presence of Yogi 108 Swami Sachchidananda Saraswati. <br/>
+            Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment. <br/>
             Discover the timeless wisdom and serene beauty of our Ashram, where seekers find solace, guidance, and inner transformation. <br/>
             Click "Read More" to embark on a journey of spiritual discovery with us.
             <div style={{ textAlign: 'right', paddingTop: '10px' }}>
@@ -69,9 +68,8 @@ export const SatsangSection = ({yt}) => {
         </Box>
         <Link to={'/satsang'} style={{textDecoration: "none", color: "inherit"}}>
             <Box className="ashram-text">
-                Discover Divine Insights at Sadhan Sangha Ashram <br/> 
-                Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram. <br />
-                Immerse yourself in the transformative power of satsangs, where the luminous teachings of Guruji illuminate the path to enlightenment. <br/>
+                Discover Divine Insights at Sadhan Sangha Ashram. <br/> 
+                Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment. <br/>
                 Click "Read More" to embark on a sacred journey of inner exploration with soul-stirring satsangs from our Guruji. <br />
                 <div style={{ textAlign: 'right', paddingTop: '10px'}}>
                     <Button className="btn-primary" size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>Read More</Button>

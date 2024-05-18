@@ -5,12 +5,14 @@
   --default-300: #464038;
   --orange-500: #c96a14;
 
+  --bg-light: var(--default-100);
   --bg: var(--default-200);
-  --text: var(--default-300);
   --bg-dark: var(--default-300);
-  --text-dark: var(--default-200);
   --text-light: var(--default-100);
+  --text: var(--default-300);
   --text-mid: var(--default-250);
+  --text-dark: var(--default-200);
+
   --footer-header: var(--orange-500);
 }
 

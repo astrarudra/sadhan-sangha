@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { SSALogoIcon, ResponsiveTypography } from './UIElements';
 import { drawerWidth } from '../constants'
+import { scrollToTop } from '../helper';
 
 const DrawerAppBar = ({pages}) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -34,7 +35,7 @@ const DrawerAppBar = ({pages}) => {
           const { name, path, Icon, hidden } = pages[key]
           if(hidden === true) return null
           return <ListItem key={key} disablePadding>
-            <ListItemButton component="a" href={path}>
+            <ListItemButton component="a" href={path} onClick={scrollToTop}>
               <Icon/>
               <ListItemText sx={{ml: '10px'}} primary={name}/>
             </ListItemButton>
@@ -65,7 +66,7 @@ const DrawerAppBar = ({pages}) => {
             {Object.keys(pages).map((key) => {
               const { name, path, Icon, hidden } = pages[key]
               if(hidden === true) return null
-              return <Link to={path}>
+              return <Link to={path} onClick={scrollToTop}>
                 <Button key={name} sx={{ color: '#464038', textTransform: 'Capitalize', ml: "5px" }} startIcon={<Icon style={{ color: '#bea894' }}/>}>
                   {name}
                 </Button>
