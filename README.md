@@ -38,7 +38,7 @@ The website is completely open-source. Feel free to use this repository for lear
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 ### Hosting
-We thank the following for free hosting :<br><br>
+We thank the following for free hosting<br><br>
 ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 ![Imgur](https://a11ybadges.com/badge?logo=imgur)
 ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
