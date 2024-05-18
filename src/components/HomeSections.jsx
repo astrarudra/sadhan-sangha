@@ -7,6 +7,7 @@ import { ResponsiveTypography, SSADivider } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { socialLinks, primaryImgs, imgurImages } from '../constants';
 import { YTHeader, YTIFrame } from './YTComponents';
+import { scrollToTop } from '../helper';
 
 export const GurujiSection = ({wFactor}) => {
     return <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
@@ -27,7 +28,7 @@ export const GurujiSection = ({wFactor}) => {
 }
 
 export const AshramSection = () => {
-    return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}}>
+    return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
     <div style={{position: 'relative'}}>
         <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
             <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>
@@ -66,7 +67,7 @@ export const SatsangSection = ({yt}) => {
                 </div>
             </div>
         </Box>
-        <Link to={'/satsang'} style={{textDecoration: "none", color: "inherit"}}>
+        <Link to={'/satsang'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
             <Box className="ashram-text">
                 Discover Divine Insights at Sadhan Sangha Ashram. <br/> 
                 Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment. <br/>
