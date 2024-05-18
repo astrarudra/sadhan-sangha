@@ -123,6 +123,10 @@ figure {
   cursor: pointer;
 }
 
+.follow-logo svg {
+  font-size: 64px;
+}
+
 .follow-logo:hover {
   background-color: #ffffff;
   scale: 1.05;
@@ -232,7 +236,7 @@ figure {
 }
 
 .footer-social:hover {
-  color: var(--text-dark);
+  color: var(--text-light);
   filter: none;
 }
 

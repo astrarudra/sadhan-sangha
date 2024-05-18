@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
-import { ResponsiveTypography, SSADivider } from '../components/UIElements';
+import { ResponsiveTypography, SSADivider, FollowIcon, PrimeMusicIcon } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { socialLinks, primaryImgs, imgurImages } from '../constants';
 import { YTHeader, YTIFrame } from './YTComponents';
 import { scrollToTop } from '../helper';
+import { Grid } from '@mui/material';
 
 export const GurujiSection = ({wFactor}) => {
     return <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
@@ -36,7 +37,7 @@ export const AshramSection = () => {
         <Box className="ashram-text">
             Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment. <br/>
             Discover the timeless wisdom and serene beauty of our Ashram, where seekers find solace, guidance, and inner transformation. <br/>
-            Click "Read More" to embark on a journey of spiritual discovery with us.
+            Explore further to embark on a journey of spiritual discovery with us. <br/>
             <div style={{ textAlign: 'right', paddingTop: '10px' }}>
                 <Button className="btn-primary"  size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>Read More</Button>
             </div>
@@ -71,7 +72,7 @@ export const SatsangSection = ({yt}) => {
             <Box className="ashram-text">
                 Discover Divine Insights at Sadhan Sangha Ashram. <br/> 
                 Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment. <br/>
-                Click "Read More" to embark on a sacred journey of inner exploration with soul-stirring satsangs from our Guruji. <br />
+                Dive deeper into the spiritual journey with our extensive collection of soul-stirring satsangs from Guruji. <br />
                 <div style={{ textAlign: 'right', paddingTop: '10px'}}>
                     <Button className="btn-primary" size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>Read More</Button>
                 </div>
@@ -84,35 +85,19 @@ export const SatsangSection = ({yt}) => {
 export const FollowUsSection = () => {
     const {fb, yt, ap, sp} = socialLinks
     return (
-        <Box sx={{display: { xs: "block", sm: "flex"}, padding: "15px 0px"}}>
-            <div className="d-flex f1">
-                <div class="follow-logo" onClick={() => window.open(socialLinks.fb.l, "_blank")}>
-                    <Icon icon={fb.i} style={{fontSize: '64px'}}/>
-                    <div className="font-freeman">{fb.n}</div>
-                </div>
-                <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(yt.l, "_blank")}>
-                    <Icon icon={yt.i} style={{fontSize: '64px'}}/>
-                    <div className="font-freeman">{yt.n}</div>
-                </div>
-            </div>
-            <div style={{width: '10px', height: '10px'}}></div>
-            <div className="d-flex f1">
-                <div class="follow-logo" onClick={() => window.open(sp.l, "_blank")}>
-                    <Icon icon={sp.i} style={{fontSize: '64px'}}/>
-                    <div className="font-freeman">{sp.n}</div>
-                </div>
-                <div class="follow-logo" style={{marginLeft: '10px'}} onClick={() => window.open(ap.l, "_blank")}>
-                    <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <div className="prime-music">
-                            <Icon icon={ap.i} style={{fontSize: '50px'}}/>
-                        </div>
-                    </div>
-                    <ResponsiveTypography mdText={ap.n} smText={ap.n2}  className="font-freeman" sx={{fontSize: '20px'}}/>
-                </div>
-            </div>
-        </Box>
-    )
-}
+    <Box sx={{ flexGrow: 1, p: 2 }}>
+        <Grid container spacing={2}>
+            {[fb, yt, sp].map((data, i) => <Grid item xs={6} sm={3}>
+                <FollowIcon key={i} text={data.n} link={data.l} icon={data.i}/>
+            </Grid>)}
+            <Grid item xs={6} sm={3}>
+                <PrimeMusicIcon ap={ap}/>
+            </Grid>
+        </Grid>
+    </Box>
+    );
+};
+
 
 export const FollowUsBox = () => {
     return <div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { BoxFixedWidth, ResponsiveTypography, SSADivider } from '../components/UIElements';
-import { Box } from '@mui/material';
+import { BoxFixedWidth, FollowIcon, PrimeMusicIcon, ResponsiveTypography, SSADivider } from '../components/UIElements';
+import { Box, Grid } from '@mui/material';
 import { socialLinks } from '../constants';
 import { YTHeader, YTIFrame, YTPlaylistBox } from '../components/YTComponents';
 import { useStore } from '../appStore';
@@ -55,20 +55,15 @@ const SatsangPage = () => {
                         </div>
                         {playlists.reverse().map((data, i) => <YTPlaylistBox key={i} data={data}/>)}
                         <h2>Also Available At</h2>
-                        <Box sx={{display: {md:"flex", xs: "block", sm: "block"}, padding: '0px 15px 15px'}}>
-                            <div class="follow-logo f1" onClick={() => window.open(sp.l, "_blank")}>
-                                <Icon icon={sp.i} style={{fontSize: '64px'}}/>
-                                <div className="font-freeman">{sp.n}</div>
-                            </div>
-                            <div style={{width:"15px", height:"15px"}}></div>
-                            <div class="follow-logo f1" onClick={() => window.open(ap.l, "_blank")}>
-                                <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <div className="prime-music">
-                                        <Icon icon={ap.i} style={{fontSize: '50px'}}/>
-                                    </div>
-                                </div>
-                                <ResponsiveTypography mdText={ap.n} smText={ap.n2}  className="font-freeman" sx={{fontSize: '20px'}}/>
-                            </div>
+                        <Box sx={{ flexGrow: 1, p: 2 }}>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={12} md={6}>
+                                    <FollowIcon text={sp.n} icon={sp.i} link={sp.l}/>
+                                </Grid>
+                                <Grid item xs={12} sm={12} md={6}>
+                                    <PrimeMusicIcon ap={ap}/>
+                                </Grid>
+                            </Grid>
                         </Box>
                     </div>
                     <SatsangInfo />

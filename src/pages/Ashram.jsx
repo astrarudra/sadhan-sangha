@@ -31,23 +31,23 @@ export const AshramSection = () => {
     const [gallery] = useStore(s => [s.config.gallery])
     const { albums } = gallery;
     const textRef = useRef(null);
-    const [width, setWidth] = useState(false);
-
+    const [width, setWidth] = useState(window.innerWidth);
+    
     useEffect(() => {
-      const handleResize = () => {
-        setWidth(window.innerWidth)
-        if (!textRef.current) return
-      };
-      window.addEventListener('resize', handleResize);
-      handleResize();
-      return () => {
-        window.removeEventListener('resize',handleResize);
-      };
+        const handleResize = () => {
+            setWidth(window.innerWidth)
+            if (!textRef.current) return
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize()
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const smallScreen = width < 600
-    const maxRows = smallScreen ? 2 : textRef.current ? calcMaxRows(textRef.current.clientHeight) : 2
-
+    const maxRows = smallScreen ? 2 : textRef.current ? calcMaxRows(textRef.current.clientHeight) : width >= 760 ? 4 : 6;
+    // 6 is based on the text - needs to be changed if text changes. Effetcs only (600 to 760px screens)
     return <div style={{position: 'relative'}}>
         <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
             <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>

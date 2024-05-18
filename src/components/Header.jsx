@@ -53,7 +53,7 @@ const DrawerAppBar = ({pages}) => {
         <Toolbar>
           <Link to={'/'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
             <div style={{display: 'flex', alignItems: "center"}}>
-              <div style={{height: '48px', marginRight: '10px'}}>
+              <div style={{height: '48px', width: '48px', marginRight: '10px'}}>
                 <div className='logo-wrap'>
                   <SSALogoIcon />
                 </div>
