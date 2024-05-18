@@ -10,7 +10,6 @@ export const primaryImgs = [
         alt: "Guruji",
         height: w1 * 1.29,
         width: w1,
-        
     },
     {
         src: "https://i.imgur.com/GtJ3TKa.jpg",
@@ -29,7 +28,7 @@ export const primaryImgs = [
 export const socialLinks = {
     fb: {i: "logos:facebook",  n: "Facebook", n2: "FB", l: "https://facebook.com/SadhanSangha"},
     yt: {i: "logos:youtube-icon", n: "Youtube", n2: "YT", l: "https://youtube.com/@SadhanSangha"},
-    sp: {i: "logos:spotify-icon", n: "Spotify", l: "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
+    sp: {i: "logos:spotify-icon", n: "Spotify", n2: "SP", l: "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
     ap: {i: "simple-icons:prime", n: "Amazon Music", n2: "Music", l:"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
 }
 

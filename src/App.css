@@ -115,20 +115,21 @@ figure {
   border-radius: 12px 12px 0px 0px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .spotify-remove-border-radius {
   width: 100%;
   background-color: #282828;
-  height: 355px;
+  height: 100%;
   position: absolute;
   z-index: -1;
 }
 
 .follow-logo {
   background-color: #ffffffba;
-  width: 25%;
-  padding: 20px 5px;
+  flex: 1;
+  padding: 20px;
   border-radius: 25px;
   font-size: 20px;
   transition: scale 0.3s;
@@ -182,6 +183,11 @@ figure {
 .contact-parent {
   font-size: 16px;
   padding: 10px;
+  cursor: pointer;
+}
+
+.contact-parent:hover {
+  color: var(--text-dark);
 }
 
 .contact-icon {

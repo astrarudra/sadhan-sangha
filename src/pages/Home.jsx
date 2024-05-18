@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { GurujiSection, AshramSection, SatsangSection, FollowUsSection } from '../components/HomeSections'
+import { GurujiSection, AshramSection, SatsangSection, FollowUsBox } from '../components/HomeSections'
 import { SSADivider, BoxFixedWidth } from '../components/UIElements';
+import { useStore } from '../appStore';
 
 const Home = () => {
+    const [yt] = useStore(s => [s.config.yt])
     const [winWidth, setWinWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -25,11 +27,8 @@ const Home = () => {
             <AshramSection />
             <SSADivider />
             <h1>Satsang</h1>
-            <SatsangSection />
-            <SSADivider />
-            <h1>Follow Us</h1>
-            <FollowUsSection />
-            <SSADivider />
+            <SatsangSection yt={yt}/>
+            <FollowUsBox />
         </BoxFixedWidth>
     );
 };

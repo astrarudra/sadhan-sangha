@@ -13,7 +13,7 @@ const GalleryPage = () => {
         <div>
             <h1>The Gallery</h1>
                 <BoxFixedWidth>
-                <div className="card d-flex" style={{margin: "0px 20px"}}>
+                <div className="card d-flex">
                     <ResponsiveElement 
                         mdEl={
                             <div style={{width: '130px', padding: '0px 20px'}}>

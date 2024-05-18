@@ -19,7 +19,6 @@ const formatImages = (imgurUUIDs, sort) => {
 const ImgurViewer = ({images: imgurUUIDs, sort=true, ...props}) => {
     const images = formatImages(imgurUUIDs, sort);
     const [index, setIndex] = useState(-1);
-    console.log(props, "props")
     const currentImage = images[index];
     const nextIndex = (index + 1) % images.length;
     const nextImage = images[nextIndex] || currentImage;
