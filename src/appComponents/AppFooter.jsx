@@ -37,24 +37,23 @@ const FooterBottomSection = () => {
           <Grid item xs={12} sm={3} md={3}>
             <Box sx={{ textAlign: 'left'}}>
             <a href="https://github.com/astrarudra/sadhan-sangha" target="_blank" rel="noopener noreferrer" className="link">
-                <div style={{padding: "10px 15px"}}>
+                <Box sx={{padding: {xs: "10px 15px 0px 15px", sm: "10px 15px"}, textAlign: {xs: 'center', sm: "left"}}}>
                     Developed By <NoWrap>Rudra Roy</NoWrap>
-                </div>
+                </Box>
             </a>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={6}>
-            <Box sx={{ padding: "10px 15px"}}>
+          <Grid item xs={12} sm={6} md={6} sx={{padding: 0}}>
+            <Box sx={{ padding: {xs: 0, sm: "10px 15px"}}}>
             {`© 2005 - ${thisYear}`} Sadhan Sangha Ashram. All Rights Reserved.
             </Box>
           </Grid>
           <Grid item xs={12} sm={3} md={3}>
-            <Box sx={{ textAlign: 'right'}}>
+            <Box sx={{ textAlign: {xs: 'center', sm: "right"}}}>
             <Link to="/privacy" className="link" onClick={scrollToTop}>
-)>
-                <div style={{padding: "10px 15px"}}>
+                <Box sx={{padding: {xs: "0px 15px 10px 15px", sm: "10px 15px"}}}>
                     Privacy Policy
-                </div>
+                </Box>
             </Link>
             </Box>
           </Grid>
