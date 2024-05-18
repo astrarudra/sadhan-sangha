@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Sadhan Sangha Ashram Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the official GitHub repository for the Sadhan Sangha Ashram Website. This repository contains the source code for the website of Sadhan Sangha Ashram, a non-profit organization dedicated to providing spiritual guidance and wisdom.
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+**Visit the Website - [https://sadhansangha.org](https://sadhansangha.org/)**
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![](https://i.imgur.com/KsqCBDW.jpg)
 
-### `npm test`
+## About Sadhan Sangha Ashram
+Sadhan Sangha Ashram is a sanctuary of peace and spiritual enlightenment nestled between Rishikesh and Haridwar. The Ashram offers a serene environment for seekers to immerse themselves in the teachings of Yogi 108 Swami Sachchidananda Saraswati.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Today, under the guidance of the present Guruji, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul
 
-### `npm run build`
+## Open Source (FOSS)
+The website is completely open-source. Feel free to use this repository for learning purposes or to build a similar website. We kindly request that you mention or credit Sadhan Sangha Ashram if you reuse the code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+- **Static Website**: Built using JS, React 18, Zustand, MUI 5 and CSS.
+- **Fully Responsive**: Optimized for all devices, with support for screens as small as 240px.
+- **Image Gallery**: Features a Imgur Gallery Grid Component, Built on top of react-grid-gallery and  react-image-lightbox.
+- **Daily Satsangs**: Youtube, Spotify, Amazon Prime are Embedded/Linked - Playlist update will automatically reflect in the website.
+- **Configurable**: config.json (in assests) is used to configure the gallery, youtube playlist display in the website, etc.
+- **No Data Collection**: We respect your privacy and do not collect any personal data or use cookies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Upcoming Features
 
-### `npm run eject`
+Stay tuned for exciting developments and enhancements coming soon to the Sadhan Sangha Ashram website:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Sadhan Sangha App**: Our top priority is the development of the Sadhan Sangha mobile app, providing easy access to spiritual teachings and resources on-the-go.
+- **Translation**: We're working on translating the website into Hindi and Bengali to reach a wider audience and make our content more accessible.
+- **Expanded Pages**: Look forward to new pages on published books, event calendar, and donation options to enrich your experience on our website.
+- **Website Enhancement**: We're dedicated to improving user experience through SEO optimization, bundle optimization, and lazy loading images for faster page loading.
+- **More Content**: Expect regular updates with additional satsangs and gallery albums to deepen your spiritual journey with us.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Development Setup 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+It's simple as setting up any react app. You will need node, npm installed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the repo and then 
+```bash
+npm install
+npm run start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contribution
+### For Developers
+The website is open source and we welcome contributions from the community. Here's how you can contribute:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Fork the Repository**: Start by forking this repository.
+- **Make Your Changes**: Make your improvements or add new features.
+- **Submit a Pull Request**: Once your changes are ready, submit a pull request for review.
 
-### Code Splitting
+Your contributions help enhance our project and spread spiritual wisdom to a broader audience. Thank you for your support!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### For Devotees
 
-### Analyzing the Bundle Size
+The website and upcoming app will shine with more content digitalized. Contributions will be greatly appreciated. Here are some ways you can contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Satsang Video Recording**: Enhance Satsang Video Recording - Record stable video from a proper angle in landscape with the highest quality possible and send us.
+- **Videos Editing**: Help edit and enhance our satsang videos to make them more engaging and accessible.
+- **Images For Gallery**: Capture and provide high-quality images of Sadhan Sangha Ashram and Guruji for our website's image gallery.
+- **Contact Us**: If you're interested in contributing in any other way or have ideas for content creation, please reach out to us. We'd love to hear from you!
 
-### Making a Progressive Web App
+### Monetary Donations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Your support through monetary donations helps sustain the operations of Sadhan Sangha Ashram and allows us to continue spreading spiritual wisdom. If you would like to make a donation, please contact us. Your generosity is greatly appreciated and will go directly to supporting the activities and initiatives of the ashram. Thank you for your kind contribution!
