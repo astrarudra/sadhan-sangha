@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ReactComponent as SSADividerSVG } from '../assets/ssaDivider.svg';
 import { ReactComponent as SSALogo } from '../assets/ssaLogo.svg';
+import { Icon } from '@iconify/react';
 
 export const SSALogoIcon = ({variant = 'variant-brown', sx}) => {
     return <Box className={`logo-wrap ${variant}`} sx={sx}>
@@ -42,3 +43,24 @@ export const BoxFixedWidth = ({children}) => (
         </div>
     </div>
 )
+
+export const FollowIcon = ({text, icon, link}) => (
+    <div class="follow-logo" onClick={() => window.open(link, "_blank")}>
+        <Icon icon={icon}/>
+        <div>{text}</div>
+    </div>
+)
+
+export const PrimeMusicIcon = ({ap}) => {
+    const { i, n, n2, l } = ap;
+    return (
+    <div class="follow-logo" onClick={() => window.open(l, "_blank")}>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div className="prime-music">
+                <Icon icon={i} style={{fontSize: '50px'}}/>
+            </div>
+        </div>
+        <ResponsiveTypography mdText={n} smText={n2}  className="font-freeman" sx={{fontSize: '20px'}}/>
+    </div>
+    )
+}

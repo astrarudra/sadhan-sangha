@@ -1,7 +1,7 @@
 :root {
   --default-100: #fff1e4;
   --default-200: #bda894;
-  --default-250: #978575;
+  --default-250: #b5a08d;
   --default-300: #464038;
   --orange-500: #c96a14;
 
@@ -28,7 +28,7 @@ body {
 }
 
 
-.font-freeman, h1, h2 {
+.font-freeman, h1, h2, .follow-logo {
   font-family: "Freeman", sans-serif !important;
   font-weight: 400 !important;;
   font-style: normal !important;;
