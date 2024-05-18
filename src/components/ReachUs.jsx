@@ -5,7 +5,7 @@ import { contactDetails } from '../constants';
 
 const ReachUs = ({
         header = true, 
-        sx = { padding: '0px 20px', maxWidth: '180px'}, 
+        sx = { maxWidth: '180px'}, 
         classes={ parent: "v-center footer-social", icon: "footer-social-icons"}
     }) => {
     const { location, gmap, phone, email } = contactDetails

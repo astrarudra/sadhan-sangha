@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { SSALogoIcon, ResponsiveTypography } from './UIElements';
 import { drawerWidth } from '../constants'
+import { scrollToTop } from '../helper';
 
 const DrawerAppBar = ({pages}) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -34,7 +35,7 @@ const DrawerAppBar = ({pages}) => {
           const { name, path, Icon, hidden } = pages[key]
           if(hidden === true) return null
           return <ListItem key={key} disablePadding>
-            <ListItemButton component="a" href={path}>
+            <ListItemButton component="a" href={path} onClick={scrollToTop}>
               <Icon/>
               <ListItemText sx={{ml: '10px'}} primary={name}/>
             </ListItemButton>
@@ -48,9 +49,9 @@ const DrawerAppBar = ({pages}) => {
 
   return (
     <Box sx={{ display: 'flex', height: '64px' }}>
-      <AppBar component="nav" sx={{backgroundColor: '#fff1e4', color: '#464038', zIndex: 1}}>
+      <AppBar component="nav" sx={{backgroundColor: '#fff1e4', color: '#464038', zIndex: 100}}>
         <Toolbar>
-          <Link to={'/'} style={{textDecoration: "none", color: "inherit"}}>
+          <Link to={'/'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
             <div style={{display: 'flex', alignItems: "center"}}>
               <div style={{height: '48px', marginRight: '10px'}}>
                 <div className='logo-wrap'>
@@ -65,7 +66,7 @@ const DrawerAppBar = ({pages}) => {
             {Object.keys(pages).map((key) => {
               const { name, path, Icon, hidden } = pages[key]
               if(hidden === true) return null
-              return <Link to={path}>
+              return <Link to={path} onClick={scrollToTop}>
                 <Button key={name} sx={{ color: '#464038', textTransform: 'Capitalize', ml: "5px" }} startIcon={<Icon style={{ color: '#bea894' }}/>}>
                   {name}
                 </Button>

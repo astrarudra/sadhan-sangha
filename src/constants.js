@@ -4,21 +4,36 @@ const w1 = 335;
 const w2 = 355;
 const w3 = 310;
 
+export const imgurBase = 'https://i.imgur.com/'
+const imgurImageDef = {
+    boroGuruji: "bDYaUzj.jpg",
+    guruji: 'ZJjJmFy.jpg',
+    mataji: 'FvHmucT.jpg',
+    ashram: '6mtCET0.jpg',
+    bwGuruji: "Z6TyTjK.png",
+    shiva: 'FWqdf8z.png',
+}
+
+export const imgurImages = Object.keys(imgurImageDef).reduce((acc, key) => {
+    acc[key] = imgurBase + imgurImageDef[key];
+    return acc;
+}, {})
+
 export const primaryImgs = [
     {
-        src: "https://i.imgur.com/dSGzChL.jpg",
+        src: imgurImages.guruji,
         alt: "Guruji",
         height: w1 * 1.29,
         width: w1,
     },
     {
-        src: "https://i.imgur.com/GtJ3TKa.jpg",
+        src: imgurImages.boroGuruji,
         alt: "Param Guruji",
         height: w2 * 1.29,
         width: w2,
     },
     {
-        src: "https://i.imgur.com/wjB9qkj.jpg",
+        src: imgurImages.mataji,
         alt: "Mataji",
         height: w3 * 1.29,
         width: w3,

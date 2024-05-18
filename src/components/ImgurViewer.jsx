@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-const BASE = 'https://i.imgur.com/'
+import { imgurBase } from '../constants';
 
 const formatImages = (imgurUUIDs, sort) => {
     const images = imgurUUIDs.map(img => {
         const {i , h:height , w: width} = img
         const [key, ext] = i.split('.')
-        const src = `${BASE}${key}l.${ext}` // thumbnail
-        const original = `${BASE}${i}`
+        const src = `${imgurBase}${key}l.${ext}` // thumbnail
+        const original = `${imgurBase}${i}`
         return { src, original, height, width }
     })
     if(sort) images.sort((a, b) => a.height - b.height);

@@ -4,7 +4,7 @@ import ReachUs from "../components/ReachUs"
 import { BoxFixedWidth, SSADivider } from '../components/UIElements';
 import { Box } from '@mui/material';
 import { YTHeader } from '../components/YTComponents';
-import { contactDetails } from '../constants';
+import { contactDetails, imgurImages } from '../constants';
 
 
 const ContactPage = () => {
@@ -36,7 +36,7 @@ const ContactPage = () => {
                         <SSADivider className='svg-divider dark-varient'/>
                         <div className="d-flex" style={{width: '100%', justifyContent: 'center'}}>
                             <Box className="shiva-footer" style={{position: 'inherit', width: '35%'}}>
-                                <img src="https://i.imgur.com/Oq8nLuf.png" alt="Shiva Sandhan Sangha Ashram" width="100%"/>
+                                <img src={imgurImages.shiva} alt="Shiva Sandhan Sangha Ashram" width="100%"/>
                             </Box>
                         </div>
                     </div>
