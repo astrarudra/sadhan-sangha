@@ -24,7 +24,8 @@ const GalleryPage = () => {
                     />
                     <div className="f1" style={{textAlign: 'left'}}>
                         Welcome to the Gallery page of Sadhan Sangha Ashram, a treasure trove of captured moments and divine memories. Explore our collection of photographs featuring Guruji and the serene landscapes of our Ashram, all lovingly clicked by devoted souls like you. Each image is a testament to the sacred journey we share together on the path of spirituality and inner awakening. Your feedback matters to us; if you believe an image should be removed, kindly drop us an email.<br /><br />
-                        Select an album below to immerse yourself in the beauty and serenity of Sadhan Sangha Ashram.
+                        Select an album below to immerse yourself in the beauty and serenity of Sadhan Sangha Ashram. <br />
+                        Click a picture to view it in full size and high quality.
                     </div>
                 </div>
                 </BoxFixedWidth>
