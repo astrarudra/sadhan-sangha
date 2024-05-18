@@ -76,7 +76,7 @@ export const AshramSection = () => {
                             <br />
                             <b>A Haven for Seekers</b><br />
                             <br />
-                            Today, under the guidance of the present Guruji, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul.<br />
+                            Today, under the guidance of the present Guruji, Shri Achyut Chetan Maharaj, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul.<br />
                             <br />
                             <b>Join Us</b><br />
                             <br />

@@ -14,7 +14,7 @@ Welcome to the official GitHub repository for the Sadhan Sangha Ashram Website. 
 ## About Sadhan Sangha Ashram
 Sadhan Sangha Ashram is a sanctuary of peace and spiritual enlightenment nestled between Rishikesh and Haridwar. The Ashram offers a serene environment for seekers to immerse themselves in the teachings of Yogi 108 Swami Sachchidananda Saraswati.
 
-Today, under the guidance of the present Guruji, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul
+Today, under the guidance of the present Guruji, Shri Achyut Chetan Maharaj, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul
 
 ## Open Source (FOSS)
 The website is completely open-source. Feel free to use this repository for learning purposes or to build a similar website. We kindly request that you mention or credit Sadhan Sangha Ashram if you reuse the code.
