@@ -1,15 +1,16 @@
 import React from 'react';
 import { BoxFixedWidth, SSADivider } from '../components/UIElements';
-import { contactDetails } from '../constants';
+import { useStore } from '../appStore';
 
 
 const PrivacyPage = () => {
+    const [contactDetails, footer] = useStore(s => [s.config.contactDetails, s.config.footer])
     const { location, gmap, phone, email } = contactDetails
     const phoneLink = `tel:${phone.replaceAll(' ','')}`
     const emailLink = `mailto:${email}`
     return (
         <BoxFixedWidth>
-            <h1>Privacy Policy</h1>
+            <h1>{footer.privacy}</h1>
             <div className="card" style={{textAlign: 'left'}}>
                 Updated on 19th May, 2024
                 <br />

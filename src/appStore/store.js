@@ -2,22 +2,12 @@ import { immer } from 'zustand/middleware/immer'
 // import { loadState, saveState } from './localStorage'
 import { createWithEqualityFn  } from 'zustand/traditional'
 import { shallow } from 'zustand/shallow'
-import configJson from '../assets/config.json'
 
 import HomeIcon from '@mui/icons-material/Home';
 import TempleHinduIcon from '@mui/icons-material/TempleHindu';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-
-const formatConfig = (configJson) => {
-  const { gallery } = configJson
-  const { albums } = gallery;
-  Object.keys(albums).forEach((key) => {
-    albums[key].key = key;
-  })
-  return configJson
-}
 
 // const forLocal = (s) => {
 //     const { version, darkMode, links, files } = s

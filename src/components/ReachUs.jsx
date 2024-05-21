@@ -1,13 +1,14 @@
 import PlaceIcon from '@mui/icons-material/Place';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import { contactDetails } from '../constants';
+import { useStore } from '../appStore';
 
 const ReachUs = ({
         header = true, 
         sx = { maxWidth: '180px'}, 
         classes={ parent: "v-center footer-social", icon: "footer-social-icons"}
     }) => {
+    const [contactDetails] = useStore(s => [s.config.contactDetails])
     const { location, gmap, phone, email } = contactDetails
     const phoneLink = `tel:${phone.replaceAll(' ','')}`
     const emailLink = `mailto:${email}`

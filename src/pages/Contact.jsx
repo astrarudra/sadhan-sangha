@@ -1,22 +1,22 @@
 import React from 'react';
-import { Icon } from '@iconify/react';
 import ReachUs from "../components/ReachUs"
 import { BoxFixedWidth, SSADivider } from '../components/UIElements';
 import { Box } from '@mui/material';
 import { YTHeader } from '../components/YTComponents';
-import { contactDetails, imgurImages } from '../constants';
 import IFrameLazy from '../components/IFrameLazy';
+import { useStore } from '../appStore';
 
 
 const ContactPage = () => {
-    const { gmap } = contactDetails
+    const [contactDetails, primaryImgs] = useStore(s => [s.config.contactDetails, s.config.primaryImgs])
+    const { shiva } = primaryImgs
     return (
         <BoxFixedWidth>
             <h1>Contact</h1>
             <div className="card">
                 <Box className="d-flex" sx={{display: { xs: "block", sm: "flex"}}}>
                     <div className="f1">
-                        <YTHeader mdText="Google Map" xsText="Google Map" link={gmap} linkText="" iconify='logos:google-icon'/>
+                        <YTHeader mdText="Google Map" xsText="Google Map" link={contactDetails.gmap} linkText="" iconify='logos:google-icon'/>
                         <Box sx={{height: { xs: "200px", sm: "450px"}}}>
                             <IFrameLazy src={contactDetails.gmapEmbed} title={contactDetails.title} load={true}/>
                         </Box>
@@ -31,7 +31,7 @@ const ContactPage = () => {
                         <SSADivider className='svg-divider dark-varient'/>
                         <div className="d-flex" style={{width: '100%', justifyContent: 'center'}}>
                             <Box className="shiva-footer" style={{position: 'inherit', width: '35%'}}>
-                                <img src={imgurImages.shiva} alt="Shiva Sandhan Sangha Ashram" width="100%"/>
+                                <img src={shiva.src} alt={shiva.alt} width="100%"/>
                             </Box>
                         </div>
                     </div>

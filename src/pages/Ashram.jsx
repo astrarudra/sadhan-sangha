@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import ImgurViewer from '../components/ImgurViewer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Link } from 'react-router-dom';
-import { imgurImages } from '../constants';
 
 const calcMaxRows = (clientHeight) => {
     return parseInt(clientHeight / 250);
@@ -27,11 +26,11 @@ const DynamicGallery = ({gallery, albums, maxRows, width}) => {
     </div>
 }
 
-export const AshramSection = () => {
-    const [gallery] = useStore(s => [s.config.gallery])
+export const AshramSection = ({gallery, primaryImgs}) => {
     const { albums } = gallery;
     const textRef = useRef(null);
     const [width, setWidth] = useState(window.innerWidth);
+    const { ashram } = primaryImgs
     
     useEffect(() => {
         const handleResize = () => {
@@ -49,8 +48,8 @@ export const AshramSection = () => {
     const maxRows = smallScreen ? 2 : textRef.current ? calcMaxRows(textRef.current.clientHeight) : width >= 760 ? 4 : 6;
     // 6 is based on the text - needs to be changed if text changes. Effetcs only (600 to 760px screens)
     return <div style={{position: 'relative'}}>
-        <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
-            <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>
+        <div className="hover01 column" style={{display: "flex", justifyContent: "center"}}>
+            <figure><img src={ashram.src} alt={ashram.alt} style={{width: '100%'}}/></figure>
         </div>
         <div style={{padding: '40px 0px'}}>
             <Box className="card">
@@ -94,12 +93,14 @@ export const AshramSection = () => {
 }
 
 const AshramPage = () => {
+    const [config] = useStore(s => [s.config])
+    const {headers , gallery, primaryImgs} = config
     return (
         <BoxFixedWidth>
-            <h1>The Ashram</h1>
-            <AshramSection />
+            <h1>{headers.ashram}</h1>
+            <AshramSection gallery={gallery} primaryImgs={primaryImgs}/>
             <SSADivider />
-            <h1>Follow Us</h1>
+            <h1>{headers.follow}</h1>
             <FollowUsSection />
             <SSADivider />
         </BoxFixedWidth>

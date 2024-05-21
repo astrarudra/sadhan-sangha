@@ -1,5 +1,87 @@
 
 {
+    "version": 1.0,
+    "primaryInfo": {
+        "title": "Sadhan Sangha Ashram",
+        "shortTitle": "Sadhan Sangha",
+        "menuTitle": "Sadhan Sangha - Menu"
+    },
+    "headers": {
+        "ashram": "The Ashram",
+        "satsang": "Satsang",
+        "follow": "Follow Us",
+        "navigate": "Navigation",
+        "contact": "Contact Us",
+        "gallery": "Gallery",
+        "downloadApp": "Download App"
+    },
+    "CONSTS": {
+        "ytPList": "https://youtube.com/playlist?list=",
+        "ytEmbed": "https://youtube.com/embed/",
+        "imgurBase": "https://i.imgur.com/",
+        "spotifyPL": "https://open.spotify.com/embed/show/2ZObyJtMT9202nOOIazkmv?utm_source=generator&theme=0",
+        "spotifyPLTitle": "Spotify Satsang Playlist"
+    },
+    "primaryImgs": {
+        "guruji":{
+          "src":"ZJjJmFy.jpg",
+          "display":"Guruji",
+          "width":335,
+          "ratio":1.29,
+          "bg":"radial-gradient(circle, rgba(252,192,156,1) 40%, rgba(200,57,61,1) 80%)"
+        },
+        "boroGuruji":{
+          "src":"bDYaUzj.jpg",
+          "display":"Param Guruji",
+          "width":355,
+          "ratio":1.29,
+          "bg":"radial-gradient(circle, #ffe8e8 20%, #af2a84 80%)"
+        },
+        "mataji":{
+          "src":"FvHmucT.jpg",
+          "display":"Mataji",
+          "width":310,
+          "ratio":1.29,
+          "bg":"radial-gradient(circle, #d5562e 40%, #ffb5c2 80%)"
+        },
+        "ashram":{
+          "src":"6mtCET0.jpg",
+          "alt":"Ashram",
+          "width":1000,
+          "ratio":0.57,
+          "bg":"linear-gradient(180deg, #ffffff 0%, #a14a4c 70%)"
+        },
+        "bwGuruji":{
+          "src":"Z6TyTjK.png",
+          "alt":"Guruji Transparent"
+        },
+        "shiva":{
+          "src":"FWqdf8z.png",
+          "alt":"Shiva"
+        }
+    },
+    "footer": {
+        "privacy": "Privacy Policy",
+        "dev": "Developed By",
+        "devName": "Rudra Roy",
+        "devLink": "https://github.com/astrarudra/sadhan-sangha",
+        "startYear": 2005,
+        "cc": "Sadhan Sangha Ashram. All Rights Reserved."
+    },
+    "contactDetails": {
+        "location": "Sadhan Sangha Ashram, Haridwar Road, Veerbhadra, Rishikesh, Uttarakhand 249202",
+        "gmap": "https://maps.app.goo.gl/fmuSMohkJcgPf7YR7",
+        "phone": "+91 135 2452522", 
+        "email": "contact@sadhansangha.org",
+        "gmapEmbed": "https://google.com/maps/embed?pb=!1m14!1m8!1m3!1d6905.53012522406!2d78.2485447!3d30.0722681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093f52f2fccf5d%3A0x800ed8e1721cf8c6!2sSadhan%20Sangha%20Ashram!5e0!3m2!1sen!2sin!4v1715953540617!5m2!1sen!2sin",
+        "gmapEmbedTitle": "Saghan Sangha Ashram Location Google Map"
+    },
+    "socialLinks": {
+        "fb": {"i": "logos:facebook",  "n": "Facebook", "n2": "FB", "l": "https://facebook.com/SadhanSangha"},
+        "yt": {"i": "logos:youtube-icon", "n": "Youtube", "n2": "YT", "l": "https://youtube.com/@SadhanSangha"},
+        "sp": {"i": "logos:spotify-icon", "n": "Spotify", "n2": "SP", "l": "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
+        "ap": {"i": "simple-icons:prime", "n": "Amazon Music", "n2": "Music", "l":"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
+    },
     "gallery": {
         "albums": {
             "guruji": { "value": "Guruji"},
@@ -11,7 +93,7 @@
     "yt": {
         "channel": "@SadhanSangha",
         "podcast": "videoseries?list=PL_MOImlZCzxj05BtkOrCvyrhHOnQVU1o-",
-        "satsangHeaderVid": "srn9_-36LBI?si=D60Ml1gP-W68l6Z9&amp;start=645",
+        "satsangHeaderVid": "srn9_-36LBI?start=645",
         "playlists": [
             {"l": "PL_MOImlZCzxhQWEq9STDkIe7uN1Vtds37","t": "Satsangs - 2024 Jan & Feb","st": "'24 Jan & Feb"}, 
             {"l": "PL_MOImlZCzxgSBU41EgwAcHPiw9Q1hELN-","t": "Satsangs - 2024 March","st": "'24 March"}, 

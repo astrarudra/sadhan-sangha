@@ -2,25 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { SSADivider, FollowIcon, PrimeMusicIcon } from '../components/UIElements';
+import { FollowIcon, PrimeMusicIcon } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { socialLinks, primaryImgs, primaryInfo, CONSTS } from '../constants';
 import { YTHeader } from './YTComponents';
 import { scrollToTop } from '../helper';
 import { Grid } from '@mui/material';
 import ImgLazy from './ImgLazy';
 import IFrameLazy from './IFrameLazy';
+import { useStore } from '../appStore';
 
 export const GurujiSection = ({wFactor}) => {
+    const [ primaryImgs ] = useStore(s => [s.config.primaryImgs])
     const {guruji, boroGuruji, mataji} = primaryImgs
-    return <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
+    return <div className="hover01 column" style={{display: "flex", justifyContent: "center"}}>
         {[guruji, boroGuruji, mataji].map((img, i) => {
             return (
                 <div key={i} style={{position: 'relative', height: 'max-content'}}>
                     <figure>
                         <ImgLazy src={img.src} alt={img.alt} width={parseInt(img.width * wFactor)} height={parseInt(img.height * wFactor)} bg={img.bg} load={true}/>
                     </figure>
-                    <Box className={`clip-div ${i%2 === 0 ? 'reverse' : ''}`}>{img.alt}</Box>
+                    <Box className={`clip-div ${i%2 === 0 ? 'reverse' : ''}`}>{img.display}</Box>
                 </div>
             )
         })}
@@ -28,10 +29,11 @@ export const GurujiSection = ({wFactor}) => {
 }
 
 export const AshramSection = ({wFactor, onLoad}) => {
+    const [ primaryImgs ] = useStore(s => [s.config.primaryImgs])
     const { ashram } = primaryImgs
     return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
     <div style={{position: 'relative'}}>
-        <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
+        <div className="hover01 column" style={{display: "flex", justifyContent: "center"}}>
             <figure>
                 <ImgLazy onLoad={onLoad} src={ashram.src} alt={ashram.alt} width={parseInt(ashram.width * wFactor)} height={parseInt(ashram.height * wFactor)} bg={ashram.bg} />
             </figure>
@@ -48,9 +50,9 @@ export const AshramSection = ({wFactor, onLoad}) => {
     </Link>
 }
 
-export const SatsangSection = ({yt, loadIframe}) => {
+export const SatsangSection = ({loadIframe}) => {
+    const [yt, socialLinks, CONSTS ] = useStore(s => [s.config.yt, s.config.socialLinks, s.config.CONSTS])
     const {podcast: ytPodcast} = yt;
-    console.log("loadIframe LOAD - ", loadIframe)
     return (
     <div style={{position: 'relative'}}>
         <Box sx={{display: { xs: "block", sm: "flex"}}}>
@@ -87,6 +89,7 @@ export const SatsangSection = ({yt, loadIframe}) => {
 }
 
 export const FollowUsSection = () => {
+    const [ socialLinks ] = useStore(s => [s.config.socialLinks])
     const {fb, yt, ap, sp} = socialLinks
     return (
     <Box sx={{ flexGrow: 1, p: 2 }}>
@@ -101,13 +104,3 @@ export const FollowUsSection = () => {
     </Box>
     );
 };
-
-
-export const FollowUsBox = () => {
-    return <div>
-        <SSADivider />
-        <h1>{primaryInfo.sections.follow}</h1>
-        <FollowUsSection />
-        <SSADivider />
-    </div>
-}

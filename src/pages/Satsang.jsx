@@ -1,10 +1,8 @@
 import React from 'react';
-import { BoxFixedWidth, FollowIcon, PrimeMusicIcon, ResponsiveTypography, SSADivider } from '../components/UIElements';
+import { BoxFixedWidth, FollowIcon, PrimeMusicIcon, SSADivider } from '../components/UIElements';
 import { Box, Grid } from '@mui/material';
-import { CONSTS, socialLinks } from '../constants';
-import { YTHeader, YTIFrame, YTPlaylistBox } from '../components/YTComponents';
+import { YTHeader, YTPlaylistBox } from '../components/YTComponents';
 import { useStore } from '../appStore';
-import { Icon } from '@iconify/react';
 import IFrameLazy from '../components/IFrameLazy';
 
 const SatsangInfo = () => {
@@ -34,7 +32,7 @@ const SatsangInfo = () => {
 }
 
 const SatsangPage = () => {
-    const [uTube] = useStore(s => [s.config.yt])
+    const [uTube, socialLinks, CONSTS] = useStore(s => [s.config.yt, s.config.socialLinks, s.config.CONSTS])
     const { satsangHeaderVid, podcast, playlists } = uTube;
     const { ap, sp} = socialLinks
     return (

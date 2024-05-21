@@ -45,7 +45,7 @@ export const BoxFixedWidth = ({children}) => (
 )
 
 export const FollowIcon = ({text, icon, link}) => (
-    <div class="follow-logo" onClick={() => window.open(link, "_blank")}>
+    <div className="follow-logo" onClick={() => window.open(link, "_blank")}>
         <Icon icon={icon}/>
         <div>{text}</div>
     </div>
@@ -54,7 +54,7 @@ export const FollowIcon = ({text, icon, link}) => (
 export const PrimeMusicIcon = ({ap}) => {
     const { i, n, n2, l } = ap;
     return (
-    <div class="follow-logo" onClick={() => window.open(l, "_blank")}>
+    <div className="follow-logo" onClick={() => window.open(l, "_blank")}>
         <div style={{display: 'flex', justifyContent: 'center'}}>
             <div className="prime-music">
                 <Icon icon={i} style={{fontSize: '50px'}}/>
