@@ -3,6 +3,7 @@ import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { imgurBase } from '../constants';
+import ImgLazy from './ImgLazy';
 
 const formatImages = (imgurUUIDs, sort) => {
     const images = imgurUUIDs.map(img => {
@@ -36,6 +37,7 @@ const ImgurViewer = ({images: imgurUUIDs, sort=true, ...props}) => {
         onClick={handleClick}
         enableImageSelection={false}
         rowHeight={300}
+        thumbnailImageComponent={({imageProps}) => <ImgLazy {...imageProps} />}
         {...props}
       />
       {!!currentImage && (

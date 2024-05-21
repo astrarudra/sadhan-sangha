@@ -27,7 +27,9 @@ const formatConfig = (configJson) => {
 
 export const useStore = createWithEqualityFn(immer((set) => ({
     version: 1,
-    config: formatConfig(configJson),
+    config: {},
+    loaded: false,
+    imgLoaded: false,
     pages: {
       home: { name: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
       ashram: { name: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },

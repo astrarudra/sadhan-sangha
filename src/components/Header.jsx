@@ -34,12 +34,14 @@ const DrawerAppBar = ({pages}) => {
         {Object.keys(pages).map((key) => {
           const { name, path, Icon, hidden } = pages[key]
           if(hidden === true) return null
-          return <ListItem key={key} disablePadding>
-            <ListItemButton component="a" href={path} onClick={scrollToTop}>
-              <Icon/>
-              <ListItemText sx={{ml: '10px'}} primary={name}/>
-            </ListItemButton>
-          </ListItem>
+          return <Link to={path} onClick={scrollToTop} style={{textDecoration: "none", color: "inherit"}} > 
+            <ListItem key={key} disablePadding>
+              <ListItemButton >
+                <Icon/>
+                <ListItemText sx={{ml: '10px'}} primary={name}/>
+              </ListItemButton>
+            </ListItem>
+          </Link>
         })}
       </List>
     </Box>

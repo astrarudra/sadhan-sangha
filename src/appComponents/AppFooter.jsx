@@ -8,6 +8,7 @@ import { Icon } from '@iconify/react';
 import Box from '@mui/material/Box';
 import { Grid } from '@mui/material';
 import { scrollToTop } from '../helper';
+import ImgLazy from '../components/ImgLazy';
 
 const thisYear = new Date().getFullYear()
 const NoWrap = ({children}) => <span style={{whiteSpace: 'nowrap'}}>{children}</span>
@@ -17,10 +18,10 @@ const responsiveStyle = {
     opacity: { md: 0.1, lg: 0.3},
 }
 
-const FooterImages = () => {
+const FooterImages = ({load}) => {
     return <div>
         <Box className="shiva-footer" sx={responsiveStyle}>
-            <img src={imgurImages.shiva} alt="Shiva Sandhan Sangha Ashram" height="100%"/>
+            <ImgLazy src={imgurImages.shiva} alt={"Shiva Sandhan Sangha Ashram"} height="100%" bg={false} load={load}/>
         </Box>
         <Box className="logo-footer" sx={{opacity: {sm: 0.05, xs: 0.05, md: 0.1, lg: 0.1}, left: "calc(50% - 100px)"}}>
             <SSALogoIcon variant='variant-white' sx={{maxWidth: '200px'}}/>
@@ -92,10 +93,10 @@ const FooterFollowUs = () => {
 }
 
 const MainFooter = () => {
-    const [pages] = useStore(s => [s.pages])
+    const [pages, imgLoaded ] = useStore(s => [s.pages, s.imgLoaded])
     return (
       <Box className="footer d-flex" sx={{justifyContent: 'center'}}>
-        <FooterImages />
+        <FooterImages load={imgLoaded}/>
         <Grid container spacing={2} sx={{maxWidth: '1000px', zIndex: 1}}>
           <Grid item xs={12} sm={4} md={3}>
             <ReachUs />

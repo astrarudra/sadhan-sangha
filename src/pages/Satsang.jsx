@@ -1,10 +1,11 @@
 import React from 'react';
 import { BoxFixedWidth, FollowIcon, PrimeMusicIcon, ResponsiveTypography, SSADivider } from '../components/UIElements';
 import { Box, Grid } from '@mui/material';
-import { socialLinks } from '../constants';
+import { CONSTS, socialLinks } from '../constants';
 import { YTHeader, YTIFrame, YTPlaylistBox } from '../components/YTComponents';
 import { useStore } from '../appStore';
 import { Icon } from '@iconify/react';
+import IFrameLazy from '../components/IFrameLazy';
 
 const SatsangInfo = () => {
     return <Box sx={{textAlign: 'left', flex: 1, paddingLeft: '20px', height: "max-content"}}>
@@ -41,7 +42,9 @@ const SatsangPage = () => {
             <h1>Satsang</h1>
             <Box sx={{height: { xs: '200px', sm: '340px', md: '562px', lg: '562px'}}}>
                 <figure style={{height: '100%'}}>
-                    <YTIFrame title="Youtube Latest Video Satsang" embed={satsangHeaderVid} />
+                    <Box sx={{bgcolor: "black", height: "100%", width: "100%"}}>
+                        <IFrameLazy title="Youtube Latest Video Satsang" src={CONSTS.ytEmbed + satsangHeaderVid} load={true} />
+                    </Box>
                 </figure>
             </Box>
             <div style={{paddingTop: '40px'}}>
@@ -49,11 +52,11 @@ const SatsangPage = () => {
                     <div className="f1">
                         <div style={{width:"100%"}}>
                             <YTHeader mdText="Daily Satsang" link={socialLinks.yt.l}/>
-                            <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}, paddingBottom: '5px'}}>
-                                <YTIFrame title="YouTube Satsang Playlist" embed={podcast} />
+                            <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}, marginBottom: '5px', bgcolor:"black"}}>
+                                <IFrameLazy title="YouTube Satsang Playlist" src={CONSTS.ytEmbed + podcast} />
                             </Box>
                         </div>
-                        {playlists.reverse().map((data, i) => <YTPlaylistBox key={i} data={data}/>)}
+                        {[...playlists].reverse().map((data, i) => <YTPlaylistBox key={i} data={data}/>)}
                         <h2>Also Available At</h2>
                         <Box sx={{ flexGrow: 1, p: 2 }}>
                             <Grid container spacing={2}>

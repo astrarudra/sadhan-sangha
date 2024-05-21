@@ -1,25 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
-import { ResponsiveTypography, SSADivider, FollowIcon, PrimeMusicIcon } from '../components/UIElements';
+import { SSADivider, FollowIcon, PrimeMusicIcon } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { socialLinks, primaryImgs, imgurImages } from '../constants';
-import { YTHeader, YTIFrame } from './YTComponents';
+import { socialLinks, primaryImgs, primaryInfo, CONSTS } from '../constants';
+import { YTHeader } from './YTComponents';
 import { scrollToTop } from '../helper';
 import { Grid } from '@mui/material';
+import ImgLazy from './ImgLazy';
+import IFrameLazy from './IFrameLazy';
 
 export const GurujiSection = ({wFactor}) => {
+    const {guruji, boroGuruji, mataji} = primaryImgs
     return <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
-        {primaryImgs.map((img, i) => {
+        {[guruji, boroGuruji, mataji].map((img, i) => {
             return (
                 <div key={i} style={{position: 'relative', height: 'max-content'}}>
                     <figure>
-                        <img 
-                            src={img.src} alt={img.alt} 
-                            height={parseInt(img.height * wFactor)} width={parseInt(img.width * wFactor)}
-                        />
+                        <ImgLazy src={img.src} alt={img.alt} width={parseInt(img.width * wFactor)} height={parseInt(img.height * wFactor)} bg={img.bg} load={true}/>
                     </figure>
                     <Box className={`clip-div ${i%2 === 0 ? 'reverse' : ''}`}>{img.alt}</Box>
                 </div>
@@ -28,11 +27,14 @@ export const GurujiSection = ({wFactor}) => {
     </div>
 }
 
-export const AshramSection = () => {
+export const AshramSection = ({wFactor, onLoad}) => {
+    const { ashram } = primaryImgs
     return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
     <div style={{position: 'relative'}}>
         <div class="hover01 column" style={{display: "flex", justifyContent: "center"}}>
-            <figure><img src={imgurImages.ashram} alt="Ashram" style={{width: '100%'}}/></figure>
+            <figure>
+                <ImgLazy onLoad={onLoad} src={ashram.src} alt={ashram.alt} width={parseInt(ashram.width * wFactor)} height={parseInt(ashram.height * wFactor)} bg={ashram.bg} />
+            </figure>
         </div>
         <Box className="ashram-text">
             Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment. <br/>
@@ -46,15 +48,17 @@ export const AshramSection = () => {
     </Link>
 }
 
-export const SatsangSection = ({yt}) => {
+export const SatsangSection = ({yt, loadIframe}) => {
     const {podcast: ytPodcast} = yt;
+    console.log("loadIframe LOAD - ", loadIframe)
     return (
     <div style={{position: 'relative'}}>
         <Box sx={{display: { xs: "block", sm: "flex"}}}>
             <div className="f1" style={{width:"100%"}}>
                 <YTHeader mdText="Listen on Youtube" link={socialLinks.yt.l}/>
-                <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}}}>
-                    <YTIFrame title="YouTube Satsang Playlist" embed={ytPodcast} height="100%"/>
+                <Box sx={{height: {md:"352px", sm: "352px", xs: "152px", position: "relative"}}}>
+                    <div className="spotify-remove-border-radius" />
+                    <IFrameLazy src={CONSTS.ytEmbed + ytPodcast} title={"YouTube Satsang Playlist"} bg="black" load={loadIframe}/>
                 </Box>  
             </div>
             <div style={{width: '10px', height: '10px'}}></div>
@@ -62,8 +66,8 @@ export const SatsangSection = ({yt}) => {
                 <YTHeader mdText="Listen on Spotify" link={socialLinks.sp.l} linkText="Follow" iconify='logos:spotify-icon'/>
                 <div style={{position: 'relative'}}>
                     <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}, position: "relative"}}>
-                        <div className="spotify-remove-border-radius"></div>
-                        <iframe width="100%" height="100%" title="Spotify Satsang Playlist" frameborder="0" src="https://open.spotify.com/embed/show/2ZObyJtMT9202nOOIazkmv?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <div className="spotify-remove-border-radius" />
+                        <IFrameLazy src={CONSTS.spotifyPL} title={CONSTS.spotifyPLTitle} bg="black" load={loadIframe}/>
                     </Box>
                 </div>
             </div>
@@ -102,7 +106,7 @@ export const FollowUsSection = () => {
 export const FollowUsBox = () => {
     return <div>
         <SSADivider />
-        <h1>Follow Us</h1>
+        <h1>{primaryInfo.sections.follow}</h1>
         <FollowUsSection />
         <SSADivider />
     </div>

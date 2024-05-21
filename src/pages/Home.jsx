@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { GurujiSection, AshramSection, SatsangSection, FollowUsBox } from '../components/HomeSections'
 import { SSADivider, BoxFixedWidth } from '../components/UIElements';
 import { useStore } from '../appStore';
+import { primaryInfo } from '../constants';
+const { setState } = useStore.getState()
 
 const Home = () => {
-    const [yt] = useStore(s => [s.config.yt])
+    const [yt, imgLoaded] = useStore(s => [s.config.yt, s.imgLoaded])
     const [winWidth, setWinWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -17,17 +19,16 @@ const Home = () => {
         };
     }, []);
 
-    const wFactor = winWidth >= 1000 ? 1 : winWidth / 1000;
-
+    const wFactor = winWidth >= 1000 ? 1 : winWidth / 1000
     return (
         <BoxFixedWidth>
             <GurujiSection wFactor={wFactor} />
             <SSADivider />
-            <h1>Sadhan Sangha Ashram</h1>
-            <AshramSection />
+            <h1>{primaryInfo.title}</h1>
+            <AshramSection wFactor={wFactor} onLoad={() => setState({imgLoaded: true}) }/>
             <SSADivider />
-            <h1>Satsang</h1>
-            <SatsangSection yt={yt}/>
+            <h1>{primaryInfo.sections.satsang}</h1>
+            <SatsangSection yt={yt} loadIframe={imgLoaded}/>
             <FollowUsBox />
         </BoxFixedWidth>
     );
