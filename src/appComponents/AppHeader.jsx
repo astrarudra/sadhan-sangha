@@ -3,9 +3,9 @@ import Header from '../components/Header';
 import { useStore } from '../appStore';
 
 const GalleryPage = () => {
-    const [pages, primaryInfo ] = useStore(s => [s.pages, s.config.primaryInfo])
+    const [pages, texts ] = useStore(s => [s.pages, s.texts])
     return (
-        <Header pages={pages} primaryInfo={primaryInfo}/>
+        <Header pages={pages} texts={texts}/>
     );
 };
 

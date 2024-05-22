@@ -5,8 +5,8 @@ import { useStore } from '../appStore';
 const { setState } = useStore.getState()
 
 const Home = () => {
-    const [ config, imgLoaded ] = useStore(s => [s.config, s.imgLoaded])
-    const { headers, primaryInfo: { title } } = config
+    const [ texts, imgLoaded ] = useStore(s => [s.texts, s.imgLoaded])
+    const { headers } = texts
     const [winWidth, setWinWidth] = useState(window.innerWidth);
     useEffect(() => {
         const handleResize = () => {
@@ -23,7 +23,7 @@ const Home = () => {
         <BoxFixedWidth>
             <GurujiSection wFactor={wFactor} />
             <SSADivider />
-            <h1>{title}</h1>
+            <h1>{headers.title}</h1>
             <AshramSection wFactor={wFactor} onLoad={() => setState({imgLoaded: true}) }/>
             <SSADivider />
             <h1>{headers.satsang}</h1>

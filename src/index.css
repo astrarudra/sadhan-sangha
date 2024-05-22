@@ -27,6 +27,10 @@ body {
   color: var(--text)
 }
 
+p {
+  margin: 0;
+}
+
 
 .font-freeman, h1, h2, .follow-logo {
   font-family: "Freeman", sans-serif !important;

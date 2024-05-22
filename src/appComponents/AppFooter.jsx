@@ -33,7 +33,7 @@ const FooterImages = ({primaryImgs, load}) => {
 }
 
 const FooterBottomSection = () => {
-    const [ footer ] = useStore(s => [s.config.footer])
+    const [ footer ] = useStore(s => [s.texts.footer])
     const { privacy, dev, devName, devLink, startYear, cc} = footer
     return ( <div className="footer-bottom">
         <Grid container spacing={1}>
@@ -95,8 +95,9 @@ const FooterFollowUs = ({title, socialLinks}) => {
 }
 
 const MainFooter = () => {
-    const [pages, imgLoaded, config ] = useStore(s => [s.pages, s.imgLoaded, s.config])
-    const { headers = {}, primaryImgs = {}, socialLinks = {} } = config
+    const [pages, imgLoaded, config, texts ] = useStore(s => [s.pages, s.imgLoaded, s.config, s.texts])
+    const { primaryImgs = {}, socialLinks = {} } = config
+    const { headers = {} } = texts
     return (
       <Box className="footer d-flex" sx={{justifyContent: 'center'}}>
         <FooterImages primaryImgs={primaryImgs} load={imgLoaded}/>

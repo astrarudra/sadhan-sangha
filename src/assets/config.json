@@ -1,20 +1,6 @@
 
 {
     "version": 1.0,
-    "primaryInfo": {
-        "title": "Sadhan Sangha Ashram",
-        "shortTitle": "Sadhan Sangha",
-        "menuTitle": "Sadhan Sangha - Menu"
-    },
-    "headers": {
-        "ashram": "The Ashram",
-        "satsang": "Satsang",
-        "follow": "Follow Us",
-        "navigate": "Navigation",
-        "contact": "Contact Us",
-        "gallery": "Gallery",
-        "downloadApp": "Download App"
-    },
     "CONSTS": {
         "ytPList": "https://youtube.com/playlist?list=",
         "ytEmbed": "https://youtube.com/embed/",
@@ -59,14 +45,6 @@
           "src":"FWqdf8z.png",
           "alt":"Shiva"
         }
-    },
-    "footer": {
-        "privacy": "Privacy Policy",
-        "dev": "Developed By",
-        "devName": "Rudra Roy",
-        "devLink": "https://github.com/astrarudra/sadhan-sangha",
-        "startYear": 2005,
-        "cc": "Sadhan Sangha Ashram. All Rights Reserved."
     },
     "contactDetails": {
         "location": "Sadhan Sangha Ashram, Haridwar Road, Veerbhadra, Rishikesh, Uttarakhand 249202",

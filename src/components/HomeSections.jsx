@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { FollowIcon, PrimeMusicIcon } from '../components/UIElements';
+import { FollowIcon, Md, PrimeMusicIcon } from '../components/UIElements';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { YTHeader } from './YTComponents';
 import { scrollToTop } from '../helper';
@@ -29,8 +29,9 @@ export const GurujiSection = ({wFactor}) => {
 }
 
 export const AshramSection = ({wFactor, onLoad}) => {
-    const [ primaryImgs ] = useStore(s => [s.config.primaryImgs])
+    const [ primaryImgs, texts ] = useStore(s => [s.config.primaryImgs, s.texts])
     const { ashram } = primaryImgs
+    const { headers, ashramShort } = texts
     return <Link to={'/ashram'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
     <div style={{position: 'relative'}}>
         <div className="hover01 column" style={{display: "flex", justifyContent: "center"}}>
@@ -39,11 +40,9 @@ export const AshramSection = ({wFactor, onLoad}) => {
             </figure>
         </div>
         <Box className="ashram-text">
-            Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment. <br/>
-            Discover the timeless wisdom and serene beauty of our Ashram, where seekers find solace, guidance, and inner transformation. <br/>
-            Explore further to embark on a journey of spiritual discovery with us. <br/>
+            <Md>{ashramShort}</Md>
             <div style={{ textAlign: 'right', paddingTop: '10px' }}>
-                <Button className="btn-primary"  size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>Read More</Button>
+                <Button className="btn-primary"  size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>{headers.readMore}</Button>
             </div>
         </Box>
     </div>
@@ -51,7 +50,9 @@ export const AshramSection = ({wFactor, onLoad}) => {
 }
 
 export const SatsangSection = ({loadIframe}) => {
-    const [yt, socialLinks, CONSTS ] = useStore(s => [s.config.yt, s.config.socialLinks, s.config.CONSTS])
+    const [texts, config ] = useStore(s => [s.texts, s.config])
+    const { headers, satsangShort } = texts
+    const {yt, socialLinks, CONSTS } = config
     const {podcast: ytPodcast} = yt;
     return (
     <div style={{position: 'relative'}}>
@@ -75,12 +76,9 @@ export const SatsangSection = ({loadIframe}) => {
             </div>
         </Box>
         <Link to={'/satsang'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
-            <Box className="ashram-text">
-                Discover Divine Insights at Sadhan Sangha Ashram. <br/> 
-                Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment. <br/>
-                Dive deeper into the spiritual journey with our extensive collection of soul-stirring satsangs from Guruji. <br />
+            <Box className="ashram-text">{satsangShort}
                 <div style={{ textAlign: 'right', paddingTop: '10px'}}>
-                    <Button className="btn-primary" size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>Read More</Button>
+                    <Button className="btn-primary" size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>{headers.readMore}</Button>
                 </div>
             </Box>
         </Link>

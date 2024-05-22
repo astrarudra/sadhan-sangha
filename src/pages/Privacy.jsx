@@ -4,7 +4,7 @@ import { useStore } from '../appStore';
 
 
 const PrivacyPage = () => {
-    const [contactDetails, footer] = useStore(s => [s.config.contactDetails, s.config.footer])
+    const [contactDetails, footer] = useStore(s => [s.config.contactDetails, s.texts.footer])
     const { location, gmap, phone, email } = contactDetails
     const phoneLink = `tel:${phone.replaceAll(' ','')}`
     const emailLink = `mailto:${email}`

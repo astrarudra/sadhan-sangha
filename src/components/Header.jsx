@@ -17,9 +17,9 @@ import { SSALogoIcon, ResponsiveTypography } from './UIElements';
 import { drawerWidth } from '../constants'
 import { scrollToTop } from '../helper';
 
-const DrawerAppBar = ({pages, primaryInfo}) => {
+const DrawerAppBar = ({pages, texts}) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { title, shortTitle, menuTitle} = primaryInfo
+  const { title, shortTitle, menuTitle} = texts.headers
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);

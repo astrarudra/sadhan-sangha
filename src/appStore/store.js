@@ -18,6 +18,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 export const useStore = createWithEqualityFn(immer((set) => ({
     version: 1,
     config: {},
+    texts: {},
     loaded: false,
     imgLoaded: false,
     pages: {

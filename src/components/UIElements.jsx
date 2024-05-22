@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { ReactComponent as SSADividerSVG } from '../assets/ssaDivider.svg';
 import { ReactComponent as SSALogo } from '../assets/ssaLogo.svg';
 import { Icon } from '@iconify/react';
+import Markdown from 'react-markdown'
 
 export const SSALogoIcon = ({variant = 'variant-brown', sx}) => {
     return <Box className={`logo-wrap ${variant}`} sx={sx}>
@@ -63,4 +64,10 @@ export const PrimeMusicIcon = ({ap}) => {
         <ResponsiveTypography mdText={n} smText={n2}  className="font-freeman" sx={{fontSize: '20px'}}/>
     </div>
     )
+}
+
+export const Md = ({children: text}) => {
+    text = text.replaceAll('  ', '  \\\n');
+    console.log(text, "text")
+    return  <Markdown>{text}</Markdown>
 }

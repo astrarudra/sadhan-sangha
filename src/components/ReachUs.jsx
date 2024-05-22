@@ -8,12 +8,13 @@ const ReachUs = ({
         sx = { maxWidth: '180px'}, 
         classes={ parent: "v-center footer-social", icon: "footer-social-icons"}
     }) => {
-    const [contactDetails] = useStore(s => [s.config.contactDetails])
+    const [texts, contactDetails] = useStore(s => [s.texts, s.config.contactDetails])
+    const { headers } = texts
     const { location, gmap, phone, email } = contactDetails
     const phoneLink = `tel:${phone.replaceAll(' ','')}`
     const emailLink = `mailto:${email}`
     return (<div style={sx}>
-        {header && <div className="footer-header"> Reach Us </div>}
+        {header && <div className="footer-header">{headers.reachUs}</div>}
         <div className={classes.parent} style={{alignItems: 'normal'}} onClick={() => window.open(gmap, "_blank")}>
             <PlaceIcon className={classes.icon} style={{height: '100%', color: 'red'}}/>
             <div>{location}</div>
