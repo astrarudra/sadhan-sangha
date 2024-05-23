@@ -31,13 +31,12 @@ export const Controller = {
         else {
             setPageNames(lang.pages)
             setState({ config: formatConfig(config), texts: lang, loaded: true })
-            console.log('Loaded from Local Storage')
             Controller.syncVersion()
         }
     },
     loadVersion: async () => {
         const { version } = await Oxy.getGist(GIST.version)
-        console.log("Loading Version - ", version)
+        console.log("[APPLOAD] Loading Version - ", version)
         const [config, lang] = await Promise.all([
             Oxy.getGit(version, GIT.config), 
             Oxy.getGit(version, GIT.english)
@@ -51,10 +50,10 @@ export const Controller = {
         const { config: { version : currVersion } } = useStore.getState()
         const { version } = await Oxy.getGist(GIST.version, true)
         if(parseFloat(version) !== parseFloat(currVersion)) {
-            console.log('Updating App Version: ', currVersion, '->', version)
+            console.log('[SYNC] Updating App Version: ', currVersion, '->', version)
             return Controller.loadVersion()
         } else {
-            console.log('No Updates - App Version: ', currVersion)
+            console.log('[SYNC] App Version: ', currVersion, " No Updates Required")
         }
     }
 }
