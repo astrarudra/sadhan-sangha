@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+/* Tags Override */
 
 .link {
   text-decoration: none;
@@ -10,26 +8,6 @@
 
 .link:hover {
   color: var(--orange-500);
-}
-
-/* Base Class */
-
-.d-flex {
-  display: flex;
-}
-
-.v-center {
-  display: flex;
-  align-items: center;
-}
-
-.f1 {
-  flex: 1;
-}
-
-.h-center {
-  display: flex;
-  justify-content: center;
 }
 
 /* Image Effect - reference - https://codepen.io/nxworld/pen/ZYNOBZ */
@@ -155,16 +133,9 @@ figure {
   background: #ffffffd1;
   border-radius: 50%;
 }
-.variant-brown svg #ssa-body{
-  fill: #796b5d
-}
 .variant-white {
   background: inherit;
 }
-.variant-white svg #ssa-body{
-  fill: #f3d9c3
-}
-
 .card {
   padding: 20px;
   background: var(--bg-light);

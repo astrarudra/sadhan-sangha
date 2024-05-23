@@ -52,8 +52,9 @@ export const FollowIcon = ({text, icon, link}) => (
     </div>
 )
 
-export const PrimeMusicIcon = ({ap}) => {
-    const { i, n, n2, l } = ap;
+export const PrimeMusicIcon = ({ap, apn}) => {
+    const { i, l } = ap;
+    const { n, n2 } = apn
     return (
     <div className="follow-logo" onClick={() => window.open(l, "_blank")}>
         <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -68,6 +69,5 @@ export const PrimeMusicIcon = ({ap}) => {
 
 export const Md = ({children: text}) => {
     text = text.replaceAll('  ', '  \\\n');
-    console.log(text, "text")
     return  <Markdown>{text}</Markdown>
 }

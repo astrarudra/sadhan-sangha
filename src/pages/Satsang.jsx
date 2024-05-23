@@ -15,10 +15,11 @@ const SatsangInfo = ({text}) => {
 
 const SatsangPage = () => {
     const [config, texts] = useStore(s => [s.config, s.texts])
-    const { headers, satsang } = texts
+    const { headers, satsang, socialNames } = texts
     const {yt: uTube, socialLinks, CONSTS} = config
     const { satsangHeaderVid, podcast, playlists } = uTube;
     const { ap, sp} = socialLinks
+    const { ap: apn, sp: spn } = socialNames
     return (
         <BoxFixedWidth>
             <h1>{headers.satsang}</h1>
@@ -33,20 +34,20 @@ const SatsangPage = () => {
                 <Box className="card d-flex" sx={{display: { xs: "block", sm: "flex"}}}>
                     <div className="f1">
                         <div style={{width:"100%"}}>
-                            <YTHeader mdText="Daily Satsang" link={socialLinks.yt.l}/>
+                            <YTHeader mdText={headers.dailySatsang} link={socialLinks.yt.l} linkText={headers.subscribe}/>
                             <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}, marginBottom: '5px', bgcolor:"black"}}>
                                 <IFrameLazy title="YouTube Satsang Playlist" src={CONSTS.ytEmbed + podcast} />
                             </Box>
                         </div>
                         {[...playlists].reverse().map((data, i) => <YTPlaylistBox key={i} data={data}/>)}
-                        <h2>Also Available At</h2>
+                        <h2>{headers.alsoAvailableAt}</h2>
                         <Box sx={{ flexGrow: 1, p: 2 }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={12} md={6}>
-                                    <FollowIcon text={sp.n} icon={sp.i} link={sp.l}/>
+                                    <FollowIcon text={spn.n} icon={sp.i} link={sp.l}/>
                                 </Grid>
                                 <Grid item xs={12} sm={12} md={6}>
-                                    <PrimeMusicIcon ap={ap}/>
+                                    <PrimeMusicIcon ap={ap} apn={apn}/>
                                 </Grid>
                             </Grid>
                         </Box>

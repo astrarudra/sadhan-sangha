@@ -18,7 +18,7 @@ export const YTPlaylistBox = ({data: {l, t, st}}) => {
     </div>
 }
 
-export const YTHeader = ({link, mdText, xsText="", linkText="Subscribe", iconify = 'logos:youtube-icon'}) => {
+export const YTHeader = ({link, mdText, xsText="", linkText, iconify = 'logos:youtube-icon'}) => {
     return <div className="iframe-header font-freeman" onClick={() => window.open(link, "_blank")}>
         <Icon icon={iconify} style={{paddingRight: '10px'}}/>
         <ResponsiveTypography mdText={mdText} xsText={xsText}  className="font-freeman"/>

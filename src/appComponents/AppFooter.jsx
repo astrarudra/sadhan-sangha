@@ -81,14 +81,14 @@ const FooterNavigation = ({title, pages}) => {
     </div>
 }
 
-const FooterFollowUs = ({title, socialLinks}) => {
+const FooterFollowUs = ({title, socialLinks, socialNames}) => {
     return <div>
         <div className="footer-header">{title}</div>
         {Object.keys(socialLinks).map((key) => {
-            const { i, n, l } = socialLinks[key]
+            const { i, l } = socialLinks[key]
             return <div className="v-center footer-social" onClick={() => window.open(l, "_blank")}>
                 <Icon className={"footer-social-icons"} icon={i}/>
-                <div>{n}</div>
+                <div>{socialNames[key].n}</div>
             </div>
         })}
     </div>
@@ -97,7 +97,7 @@ const FooterFollowUs = ({title, socialLinks}) => {
 const MainFooter = () => {
     const [pages, imgLoaded, config, texts ] = useStore(s => [s.pages, s.imgLoaded, s.config, s.texts])
     const { primaryImgs = {}, socialLinks = {} } = config
-    const { headers = {} } = texts
+    const { headers = {}, socialNames } = texts
     return (
       <Box className="footer d-flex" sx={{justifyContent: 'center'}}>
         <FooterImages primaryImgs={primaryImgs} load={imgLoaded}/>
@@ -112,7 +112,7 @@ const MainFooter = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={3} md={2}>
-            <FooterFollowUs title={headers.follow} socialLinks={socialLinks}/>
+            <FooterFollowUs title={headers.followUs} socialLinks={socialLinks} socialNames={socialNames}/>
           </Grid>
           <Grid item xs={12} sm={3} md={2}>
                 <FooterNavigation title={headers.navigate} pages={pages} />

@@ -1,14 +1,12 @@
+import { GIST, GIT, siteTitle, LOCALSTORE } from "../constants";
 import Oxy from "../oxy"
+import { loadStateBulk, saveStateBulk } from "./localStorage";
 import { useStore } from "./store";
-import config from '../assets/config.json'
-import en from '../assets/en.json'
-const GIST = {
-    version: '589c7ae622999f36a24892f17f677b31',
-    config: '687bd615ba1208dd6842a623d15342d8'
-}
+// import lang from '../assets/en.json'
+// import bn from '../assets/bn.json'
+const { setState, setPageNames } = useStore.getState()
 
-const formatConfig = (configJson, texts) => {
-    const { headers } = texts
+const formatConfig = (configJson) => {
     const {  CONSTS, gallery, primaryImgs } = configJson
     const { albums } = gallery;
     const { imgurBase,  } = CONSTS;
@@ -17,9 +15,9 @@ const formatConfig = (configJson, texts) => {
     })
     Object.keys(primaryImgs).forEach(key => {
         const i = primaryImgs[key]
+        i.key = key
         i.src = imgurBase + i.src;
-        if(i.display) i.alt = i.display;
-        i.alt = i.alt + " - " + headers.title
+        i.alt = i.alt + " - " + siteTitle
         if(i.ratio) i.height = i.width * i.ratio;
     })
     return configJson
@@ -27,12 +25,36 @@ const formatConfig = (configJson, texts) => {
 
 export const Controller = {
     init: async () => {
-        const { setState } = useStore.getState()
-        const x = await Oxy.getGist(GIST.version)
-        console.log("Gist Version", x)
-        // const config = await Oxy.getGist(GIST.config)
-        // console.log("Gist Config", config)
-        console.log("texts", en)
-        setState({ config: formatConfig(config, en), texts: en, loaded: true })
+        const LS = loadStateBulk([LOCALSTORE.config, LOCALSTORE.en])
+        const [config, lang] = [LS[LOCALSTORE.config], LS[LOCALSTORE.en]]
+        if(!config || !lang) Controller.loadVersion()
+        else {
+            setPageNames(lang.pages)
+            setState({ config: formatConfig(config), texts: lang, loaded: true })
+            console.log('Loaded from Local Storage')
+            Controller.syncVersion()
+        }
+    },
+    loadVersion: async () => {
+        const { version } = await Oxy.getGist(GIST.version)
+        console.log("Loading Version - ", version)
+        const [config, lang] = await Promise.all([
+            Oxy.getGit(version, GIT.config), 
+            Oxy.getGit(version, GIT.english)
+        ])
+        saveStateBulk({ [LOCALSTORE.config]: config, [LOCALSTORE.en]: lang })
+        setPageNames(lang.pages)
+        setState({ config: formatConfig(config), texts: lang, loaded: true })
+        return version
+    },
+    syncVersion: async () => {
+        const { config: { version : currVersion } } = useStore.getState()
+        const { version } = await Oxy.getGist(GIST.version, true)
+        if(parseFloat(version) !== parseFloat(currVersion)) {
+            console.log('Updating App Version: ', currVersion, '->', version)
+            return Controller.loadVersion()
+        } else {
+            console.log('No Updates - App Version: ', currVersion)
+        }
     }
 }

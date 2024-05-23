@@ -13,7 +13,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 //     const { version, darkMode, links, files } = s
 //     return { version, darkMode, links, files }
 // }
-// const storeLocal = (s) => saveState(forLocal(s))
+// const storeLocalPreference = (s) => saveState('ssa-pref', forLocal(s))
 
 export const useStore = createWithEqualityFn(immer((set) => ({
     version: 1,
@@ -22,15 +22,19 @@ export const useStore = createWithEqualityFn(immer((set) => ({
     loaded: false,
     imgLoaded: false,
     pages: {
-      home: { name: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
-      ashram: { name: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
-      satsang: { name: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
-      gallery: { name: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
-      contact: { name: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
-      privacy: { name: 'Privacy', path: '/privacy', Icon: (p) => <AlternateEmailIcon {...p} />, hidden: true },
+      home: { component: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
+      ashram: { component: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
+      satsang: { component: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
+      gallery: { component: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
+      contact: { component: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
+      privacy: { component: 'Privacy', path: '/privacy', Icon: (p) => <AlternateEmailIcon {...p} />, hidden: true },
     },
+    setPageNames: (names) => set((s) => {
+        Object.keys(names).forEach((k) => {
+            s.pages[k].name = names[k];
+        });
+    }),
     setState: (payload) => set((s) => {
-        // console.log(payload, "PAYLOAD: setState")
         Object.keys(payload).forEach((k) => {
             s[k] = payload[k];
         });

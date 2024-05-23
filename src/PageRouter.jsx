@@ -26,7 +26,7 @@ const App = () => {
       <Switch>
         {Object.keys(pages).map((key) => {
           const page = pages[key]
-          return <Route key={page.path} path={page.path} component={componentMap[page.name]} />
+          return <Route key={page.path} path={page.path} component={componentMap[page.component]} />
         })}
         <Route path="/" component={Home} />
       </Switch>

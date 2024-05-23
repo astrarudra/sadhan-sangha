@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GurujiSection, AshramSection, SatsangSection, FollowUsBox, FollowUsSection } from '../components/HomeSections'
+import { GurujiSection, AshramSection, SatsangSection, FollowUsSection } from '../components/HomeSections'
 import { SSADivider, BoxFixedWidth } from '../components/UIElements';
 import { useStore } from '../appStore';
 const { setState } = useStore.getState()
@@ -29,7 +29,7 @@ const Home = () => {
             <h1>{headers.satsang}</h1>
             <SatsangSection loadIframe={imgLoaded}/>
             <SSADivider />
-            <h1>{headers.follow}</h1>
+            <h1>{headers.followUs}</h1>
             <FollowUsSection />
             <SSADivider />
         </BoxFixedWidth>

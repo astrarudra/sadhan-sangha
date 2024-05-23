@@ -76,7 +76,7 @@ const AshramPage = () => {
             <h1>{headers.ashram}</h1>
             <AshramSection text={texts.ashram} gallery={gallery} primaryImgs={primaryImgs}/>
             <SSADivider />
-            <h1>{headers.follow}</h1>
+            <h1>{headers.followUs}</h1>
             <FollowUsSection />
             <SSADivider />
         </BoxFixedWidth>

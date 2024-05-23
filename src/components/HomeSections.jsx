@@ -12,7 +12,7 @@ import IFrameLazy from './IFrameLazy';
 import { useStore } from '../appStore';
 
 export const GurujiSection = ({wFactor}) => {
-    const [ primaryImgs ] = useStore(s => [s.config.primaryImgs])
+    const [ headers, primaryImgs ] = useStore(s => [s.texts.headers, s.config.primaryImgs])
     const {guruji, boroGuruji, mataji} = primaryImgs
     return <div className="hover01 column" style={{display: "flex", justifyContent: "center"}}>
         {[guruji, boroGuruji, mataji].map((img, i) => {
@@ -21,7 +21,7 @@ export const GurujiSection = ({wFactor}) => {
                     <figure>
                         <ImgLazy src={img.src} alt={img.alt} width={parseInt(img.width * wFactor)} height={parseInt(img.height * wFactor)} bg={img.bg} load={true}/>
                     </figure>
-                    <Box className={`clip-div ${i%2 === 0 ? 'reverse' : ''}`}>{img.display}</Box>
+                    <Box className={`clip-div ${i%2 === 0 ? 'reverse' : ''}`}>{headers[img.key]}</Box>
                 </div>
             )
         })}
@@ -58,7 +58,7 @@ export const SatsangSection = ({loadIframe}) => {
     <div style={{position: 'relative'}}>
         <Box sx={{display: { xs: "block", sm: "flex"}}}>
             <div className="f1" style={{width:"100%"}}>
-                <YTHeader mdText="Listen on Youtube" link={socialLinks.yt.l}/>
+                <YTHeader mdText={headers.listenYT} link={socialLinks.yt.l} linkText={headers.subscribe}/>
                 <Box sx={{height: {md:"352px", sm: "352px", xs: "152px", position: "relative"}}}>
                     <div className="spotify-remove-border-radius" />
                     <IFrameLazy src={CONSTS.ytEmbed + ytPodcast} title={"YouTube Satsang Playlist"} bg="black" load={loadIframe}/>
@@ -66,7 +66,7 @@ export const SatsangSection = ({loadIframe}) => {
             </div>
             <div style={{width: '10px', height: '10px'}}></div>
             <div className="f1" style={{width:"100%"}}>
-                <YTHeader mdText="Listen on Spotify" link={socialLinks.sp.l} linkText="Follow" iconify='logos:spotify-icon'/>
+                <YTHeader mdText={headers.listenSP} link={socialLinks.sp.l} linkText={headers.follow} iconify='logos:spotify-icon'/>
                 <div style={{position: 'relative'}}>
                     <Box sx={{height: {md:"352px", sm: "352px", xs: "152px"}, position: "relative"}}>
                         <div className="spotify-remove-border-radius" />
@@ -87,16 +87,19 @@ export const SatsangSection = ({loadIframe}) => {
 }
 
 export const FollowUsSection = () => {
-    const [ socialLinks ] = useStore(s => [s.config.socialLinks])
+    const [ socialLinks, socialNames ] = useStore(s => [s.config.socialLinks, s.texts.socialNames])
     const {fb, yt, ap, sp} = socialLinks
     return (
     <Box sx={{ flexGrow: 1, p: 2 }}>
         <Grid container spacing={2}>
-            {[fb, yt, sp].map((data, i) => <Grid item xs={6} sm={3}>
-                <FollowIcon key={i} text={data.n} link={data.l} icon={data.i}/>
-            </Grid>)}
+            {Object.keys({fb, yt, sp}).map((key) => {
+            const {l, i} = socialLinks[key]
+            return <Grid item xs={6} sm={3}>
+                <FollowIcon key={i} text={socialNames[key].n} link={l} icon={i}/>
+            </Grid>
+            })}
             <Grid item xs={6} sm={3}>
-                <PrimeMusicIcon ap={ap}/>
+                <PrimeMusicIcon ap={ap} apn={socialNames.ap}/>
             </Grid>
         </Grid>
     </Box>

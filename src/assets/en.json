@@ -4,16 +4,33 @@
         "title": "Sadhan Sangha Ashram",
         "shortTitle": "Sadhan Sangha",
         "menuTitle": "Sadhan Sangha - Menu",
+        "guruji": "Guruji",
+        "boroGuruji": "Param Guruji",
+        "mataji": "Mataji",
         "ashram": "The Ashram",
         "satsang": "Satsang",
         "gallery": "Gallery",
         "contact": "Contact Us",
-        "follow": "Follow Us",
+        "followUs": "Follow Us",
         "navigate": "Navigation",
         "reachUs": "Reach Us",
         "downloadApp": "Download App",
         "readMore": "Read More",
-        "albumSelect": "Select"
+        "albumSelect": "Select",
+        "listenYT": "Listen on Youtube",
+        "listenSP": "Listen on Spotify",
+        "follow": "Follow",
+        "subscribe": "Subscribe",
+        "dailySatsang": "Daily Satsang",
+        "alsoAvailableAt": "Also Available At"
+    },
+    "pages": {
+        "home": "Home",
+        "ashram": "Ashram",
+        "satsang": "Satsang",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "privacy": "Privacy"
     },
     "footer": {
         "privacy": "Privacy Policy",
@@ -22,6 +39,12 @@
         "devLink": "https://github.com/astrarudra/sadhan-sangha",
         "startYear": 2005,
         "cc": "Sadhan Sangha Ashram. All Rights Reserved."
+    },
+    "socialNames": {
+        "fb": {"n": "Facebook", "n2": "FB"},
+        "yt": {"n": "Youtube", "n2": "YT"},
+        "sp": {"n": "Spotify", "n2": "SP"},
+        "ap": {"n": "Amazon Music", "n2": "Music"}
     },
     "ashramShort": "Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment.  Discover the timeless wisdom and serene beauty of our Ashram, where seekers find solace, guidance, and inner transformation.  Explore further to embark on a journey of spiritual discovery with us.",
     "satsangShort": "Discover Divine Insights at Sadhan Sangha Ashram.  Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment.  Dive deeper into the spiritual journey with our extensive collection of soul-stirring satsangs from Guruji.",

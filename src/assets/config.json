@@ -11,21 +11,21 @@
     "primaryImgs": {
         "guruji":{
           "src":"ZJjJmFy.jpg",
-          "display":"Guruji",
+          "alt":"Guruji",
           "width":335,
           "ratio":1.29,
           "bg":"radial-gradient(circle, rgba(252,192,156,1) 40%, rgba(200,57,61,1) 80%)"
         },
         "boroGuruji":{
           "src":"bDYaUzj.jpg",
-          "display":"Param Guruji",
+          "alt":"Param Guruji",
           "width":355,
           "ratio":1.29,
           "bg":"radial-gradient(circle, #ffe8e8 20%, #af2a84 80%)"
         },
         "mataji":{
           "src":"FvHmucT.jpg",
-          "display":"Mataji",
+          "alt":"Mataji",
           "width":310,
           "ratio":1.29,
           "bg":"radial-gradient(circle, #d5562e 40%, #ffb5c2 80%)"
@@ -55,10 +55,10 @@
         "gmapEmbedTitle": "Saghan Sangha Ashram Location Google Map"
     },
     "socialLinks": {
-        "fb": {"i": "logos:facebook",  "n": "Facebook", "n2": "FB", "l": "https://facebook.com/SadhanSangha"},
-        "yt": {"i": "logos:youtube-icon", "n": "Youtube", "n2": "YT", "l": "https://youtube.com/@SadhanSangha"},
-        "sp": {"i": "logos:spotify-icon", "n": "Spotify", "n2": "SP", "l": "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
-        "ap": {"i": "simple-icons:prime", "n": "Amazon Music", "n2": "Music", "l":"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
+        "fb": {"i": "logos:facebook", "l": "https://facebook.com/SadhanSangha"},
+        "yt": {"i": "logos:youtube-icon", "l": "https://youtube.com/@SadhanSangha"},
+        "sp": {"i": "logos:spotify-icon", "l": "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
+        "ap": {"i": "simple-icons:prime", "l":"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
     },
     "gallery": {
         "albums": {
