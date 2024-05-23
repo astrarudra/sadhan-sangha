@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+/* Tags Override */
 
 .link {
   text-decoration: none;
@@ -12,24 +10,12 @@
   color: var(--orange-500);
 }
 
-/* Base Class */
+/* Components */
 
-.d-flex {
-  display: flex;
-}
-
-.v-center {
-  display: flex;
-  align-items: center;
-}
-
-.f1 {
-  flex: 1;
-}
-
-.h-center {
-  display: flex;
-  justify-content: center;
+.box-fixed { 
+  max-width: 1000px;
+  text-align: center;
+  width: 100%;
 }
 
 /* Image Effect - reference - https://codepen.io/nxworld/pen/ZYNOBZ */
@@ -64,7 +50,6 @@ figure {
   color: #ffffffe8;
   position: absolute;
   bottom: 0px;
-  z-index: 100;
   width: 100%;
   font-size: calc(10px + 2vmin);
   font-family: cursive;
@@ -84,6 +69,10 @@ figure {
 }
 
 /* Generic Styles */
+
+.t-left {
+  text-align: left;
+}
 
 .ashram-text {
   color: var(--text);
@@ -155,16 +144,9 @@ figure {
   background: #ffffffd1;
   border-radius: 50%;
 }
-.variant-brown svg #ssa-body{
-  fill: #796b5d
-}
 .variant-white {
   background: inherit;
 }
-.variant-white svg #ssa-body{
-  fill: #f3d9c3
-}
-
 .card {
   padding: 20px;
   background: var(--bg-light);
