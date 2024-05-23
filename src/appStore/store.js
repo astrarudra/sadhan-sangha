@@ -16,11 +16,14 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 // const storeLocalPreference = (s) => saveState('ssa-pref', forLocal(s))
 
 export const useStore = createWithEqualityFn(immer((set) => ({
-    version: 1,
+    version: '0.0',
     config: {},
     texts: {},
     loaded: false,
     imgLoaded: false,
+    data: {
+        privacy: null,
+    },
     pages: {
       home: { component: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
       ashram: { component: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
@@ -37,6 +40,11 @@ export const useStore = createWithEqualityFn(immer((set) => ({
     setState: (payload) => set((s) => {
         Object.keys(payload).forEach((k) => {
             s[k] = payload[k];
+        });
+    }),
+    setData: (payload) => set((s) => {
+        Object.keys(payload).forEach((k) => {
+            s.data[k] = payload[k];
         });
     }),
 })), shallow);

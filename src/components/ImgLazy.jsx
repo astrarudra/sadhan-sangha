@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Box, Skeleton } from '@mui/material';
+import { SSASkeleton } from './UIElements';
 
 const ImgLazy = ({ src, alt, width ="100%", height="100%", bg = 'var(--bg)', onLoad = null, ...props}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -11,23 +12,7 @@ const ImgLazy = ({ src, alt, width ="100%", height="100%", bg = 'var(--bg)', onL
 
   return (
     <Box ref={ref} width={width} height={height} position="relative">
-      {!imageLoaded && (
-        <Skeleton
-        //   sx={{ bgcolor: 'grey.900' }}
-          variant="rectangular"
-          width={width}
-          bg-colot="white"
-          height={height}
-          animation="wave"
-          sx={{
-            opacity: 0.3,
-            background: bg,
-            '::after': {
-                background: 'linear-gradient(90deg, transparent, #ffffff8a, transparent)',
-            }
-          }}
-        />
-      )}
+      {!imageLoaded && <SSASkeleton width={width} height={height} bg={bg} />}
       {inView && (
         <img
           src={src}

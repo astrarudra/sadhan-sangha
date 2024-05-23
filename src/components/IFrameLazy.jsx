@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Box, Skeleton } from '@mui/material';
+import { SSASkeleton } from './UIElements';
 
 const IFrameLazy = ({ src, title, width="100%", height="100%", bg='var(--bg)', load=true,  ...props }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
@@ -11,21 +12,7 @@ const IFrameLazy = ({ src, title, width="100%", height="100%", bg='var(--bg)', l
 
   return (
     <Box ref={ref} width={width} height={height} position="relative">
-      {!iframeLoaded && (
-        <Skeleton
-          variant="rectangular"
-          width={width}
-          height={height}
-          animation="wave"
-          sx={{
-            opacity: 0.3,
-            background: bg,
-            '::after': {
-                background: 'linear-gradient(90deg, transparent, #ffffff8a, transparent)',
-            }
-          }}
-        />
-      )}
+      {!iframeLoaded && <SSASkeleton width={width} height={height} bg={bg} />}
       {(load || inView) && (
         <iframe
           src={src}

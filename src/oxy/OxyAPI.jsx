@@ -20,7 +20,7 @@ const OxyAPI = {
     },
     getGit : (version, path) =>{
         return new Promise(function(resolve, reject){
-            fetch(`${gitBase}/v${version}/${path}`).then((response) => {
+            fetch(`${gitBase}v${version}/${path}`).then((response) => {
                 response.json().then((data) => {
                     resolve(data)
                     }).catch((error) => {

@@ -4,7 +4,7 @@ import { loadStateBulk, saveStateBulk } from "./localStorage";
 import { useStore } from "./store";
 // import lang from '../assets/en.json'
 // import bn from '../assets/bn.json'
-const { setState, setPageNames } = useStore.getState()
+const { setState, setData, setPageNames } = useStore.getState()
 
 const formatConfig = (configJson) => {
     const {  CONSTS, gallery, primaryImgs } = configJson
@@ -27,11 +27,15 @@ export const Controller = {
     init: async () => {
         const LS = loadStateBulk([LOCALSTORE.config, LOCALSTORE.en])
         const [config, lang] = [LS[LOCALSTORE.config], LS[LOCALSTORE.en]]
-        if(!config || !lang) Controller.loadVersion()
+        if(!config || !lang) {
+            Controller.loadVersion()
+            return {status: 'Local Storage Empty, loadVersion Triggered'}
+        }
         else {
             setPageNames(lang.pages)
-            setState({ config: formatConfig(config), texts: lang, loaded: true })
+            setState({ config: formatConfig(config), texts: lang, loaded: true, version: config.version})
             Controller.syncVersion()
+            return {status: 'Loaded from Local Storage'}
         }
     },
     loadVersion: async () => {
@@ -41,19 +45,30 @@ export const Controller = {
             Oxy.getGit(version, GIT.config), 
             Oxy.getGit(version, GIT.english)
         ])
+        config.version = version
         saveStateBulk({ [LOCALSTORE.config]: config, [LOCALSTORE.en]: lang })
         setPageNames(lang.pages)
-        setState({ config: formatConfig(config), texts: lang, loaded: true })
-        return version
+        setState({ config: formatConfig(config), texts: lang, loaded: true, version })
+        return {status: 'Loaded Version ', version}
     },
     syncVersion: async () => {
-        const { config: { version : currVersion } } = useStore.getState()
+        const { version : currVersion } = useStore.getState()
         const { version } = await Oxy.getGist(GIST.version, true)
-        if(parseFloat(version) !== parseFloat(currVersion)) {
+        if(version !== currVersion) {
             console.log('[SYNC] Updating App Version: ', currVersion, '->', version)
-            return Controller.loadVersion()
+            Controller.loadVersion()
+            return {status: 'Updating Version ', version}
         } else {
             console.log('[SYNC] App Version: ', currVersion, " No Updates Required")
+            return {status: 'Version Synced ', version}
         }
+    },
+    loadPrivacy: async () => {
+        const { version, data: { privacy } } = useStore.getState()
+        if(privacy) return {status: 'Privacy Already Loaded'}
+        const privacyData = await Oxy.getGit(version, GIT.privacy)
+        setData({privacy: privacyData})
+        console.log("privacy: ", privacy)
+        return {status: 'Loaded Privacy'}
     }
 }

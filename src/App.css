@@ -10,6 +10,14 @@
   color: var(--orange-500);
 }
 
+/* Components */
+
+.box-fixed { 
+  max-width: 1000px;
+  text-align: center;
+  width: 100%;
+}
+
 /* Image Effect - reference - https://codepen.io/nxworld/pen/ZYNOBZ */
 
 figure {
@@ -61,6 +69,10 @@ figure {
 }
 
 /* Generic Styles */
+
+.t-left {
+  text-align: left;
+}
 
 .ashram-text {
   color: var(--text);

@@ -76,7 +76,7 @@ export const SatsangSection = ({loadIframe}) => {
             </div>
         </Box>
         <Link to={'/satsang'} style={{textDecoration: "none", color: "inherit"}} onClick={scrollToTop}>
-            <Box className="ashram-text">{satsangShort}
+            <Box className="ashram-text"><Md>{satsangShort}</Md>
                 <div style={{ textAlign: 'right', paddingTop: '10px'}}>
                     <Button className="btn-primary" size="large" variant="contained" endIcon={<KeyboardDoubleArrowRightIcon />}>{headers.readMore}</Button>
                 </div>

@@ -27,7 +27,7 @@ const DrawerAppBar = ({pages, texts}) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{backgroundColor: '#fff1e4', color: '#464038', height: '100vh'}}>
-      <Typography className="font-freeman" variant="h6" sx={{ py: 2, pl: 2}}>
+      <Typography className="font-fm" variant="h6" sx={{ py: 2, pl: 2}}>
        {menuTitle}
       </Typography>
       <Divider />
@@ -61,7 +61,7 @@ const DrawerAppBar = ({pages, texts}) => {
                   <SSALogoIcon />
                 </div>
               </div>
-              <ResponsiveTypography className="font-freeman" mdText={title} xsText={shortTitle} variant="h6" component="div"/>
+              <ResponsiveTypography className="font-fm" mdText={title} xsText={shortTitle} variant="h6" component="div"/>
             </div>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
