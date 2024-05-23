@@ -42,7 +42,6 @@ figure {
   color: #ffffffe8;
   position: absolute;
   bottom: 0px;
-  z-index: 100;
   width: 100%;
   font-size: calc(10px + 2vmin);
   font-family: cursive;
