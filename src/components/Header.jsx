@@ -17,8 +17,9 @@ import { SSALogoIcon, ResponsiveTypography } from './UIElements';
 import { drawerWidth } from '../constants'
 import { scrollToTop } from '../helper';
 
-const DrawerAppBar = ({pages}) => {
+const DrawerAppBar = ({pages, texts}) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { title, shortTitle, menuTitle} = texts.headers
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -26,20 +27,22 @@ const DrawerAppBar = ({pages}) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{backgroundColor: '#fff1e4', color: '#464038', height: '100vh'}}>
-      <Typography className="font-freeman" variant="h6" sx={{ py: 2, pl: 2}}>
-        Sadhan Sangha - Menu
+      <Typography className="font-fm" variant="h6" sx={{ py: 2, pl: 2}}>
+       {menuTitle}
       </Typography>
       <Divider />
       <List>
         {Object.keys(pages).map((key) => {
           const { name, path, Icon, hidden } = pages[key]
           if(hidden === true) return null
-          return <ListItem key={key} disablePadding>
-            <ListItemButton component="a" href={path} onClick={scrollToTop}>
-              <Icon/>
-              <ListItemText sx={{ml: '10px'}} primary={name}/>
-            </ListItemButton>
-          </ListItem>
+          return <Link to={path} onClick={scrollToTop} style={{textDecoration: "none", color: "inherit"}} > 
+            <ListItem key={key} disablePadding>
+              <ListItemButton >
+                <Icon/>
+                <ListItemText sx={{ml: '10px'}} primary={name}/>
+              </ListItemButton>
+            </ListItem>
+          </Link>
         })}
       </List>
     </Box>
@@ -58,7 +61,7 @@ const DrawerAppBar = ({pages}) => {
                   <SSALogoIcon />
                 </div>
               </div>
-              <ResponsiveTypography className="font-freeman" mdText="Sadhan Sangha Ashram" xsText="Sadhan Sangha" variant="h6" component="div"/>
+              <ResponsiveTypography className="font-fm" mdText={title} xsText={shortTitle} variant="h6" component="div"/>
             </div>
           </Link>
           <Box sx={{ flexGrow: 1 }} />

@@ -2,7 +2,6 @@ import { immer } from 'zustand/middleware/immer'
 // import { loadState, saveState } from './localStorage'
 import { createWithEqualityFn  } from 'zustand/traditional'
 import { shallow } from 'zustand/shallow'
-import configJson from '../assets/config.json'
 
 import HomeIcon from '@mui/icons-material/Home';
 import TempleHinduIcon from '@mui/icons-material/TempleHindu';
@@ -10,36 +9,42 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
-const formatConfig = (configJson) => {
-  const { gallery } = configJson
-  const { albums } = gallery;
-  Object.keys(albums).forEach((key) => {
-    albums[key].key = key;
-  })
-  return configJson
-}
-
 // const forLocal = (s) => {
 //     const { version, darkMode, links, files } = s
 //     return { version, darkMode, links, files }
 // }
-// const storeLocal = (s) => saveState(forLocal(s))
+// const storeLocalPreference = (s) => saveState('ssa-pref', forLocal(s))
 
 export const useStore = createWithEqualityFn(immer((set) => ({
-    version: 1,
-    config: formatConfig(configJson),
-    pages: {
-      home: { name: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
-      ashram: { name: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
-      satsang: { name: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
-      gallery: { name: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
-      contact: { name: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
-      privacy: { name: 'Privacy', path: '/privacy', Icon: (p) => <AlternateEmailIcon {...p} />, hidden: true },
+    version: '0.0',
+    config: {},
+    texts: {},
+    loaded: false,
+    imgLoaded: false,
+    data: {
+        privacy: null,
     },
+    pages: {
+      home: { component: 'Home', path: '/home', Icon: (p) => <HomeIcon {...p}/> },
+      ashram: { component: 'Ashram', path: '/ashram', Icon: (p) => <TempleHinduIcon {...p} /> },
+      satsang: { component: 'Satsang', path: '/satsang', Icon: (p) => <SelfImprovementIcon {...p} /> },
+      gallery: { component: 'Gallery', path: '/gallery', Icon: (p) => <CollectionsIcon {...p} /> },
+      contact: { component: 'Contact', path: '/contact', Icon: (p) => <AlternateEmailIcon {...p} /> },
+      privacy: { component: 'Privacy', path: '/privacy', Icon: (p) => <AlternateEmailIcon {...p} />, hidden: true },
+    },
+    setPageNames: (names) => set((s) => {
+        Object.keys(names).forEach((k) => {
+            s.pages[k].name = names[k];
+        });
+    }),
     setState: (payload) => set((s) => {
-        // console.log(payload, "PAYLOAD: setState")
         Object.keys(payload).forEach((k) => {
             s[k] = payload[k];
+        });
+    }),
+    setData: (payload) => set((s) => {
+        Object.keys(payload).forEach((k) => {
+            s.data[k] = payload[k];
         });
     }),
 })), shallow);

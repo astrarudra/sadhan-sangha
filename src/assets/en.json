@@ -1,0 +1,54 @@
+{
+    "version": 1.0,
+    "headers": {
+        "title": "Sadhan Sangha Ashram",
+        "shortTitle": "Sadhan Sangha",
+        "menuTitle": "Sadhan Sangha - Menu",
+        "guruji": "Guruji",
+        "boroGuruji": "Param Guruji",
+        "mataji": "Mataji",
+        "ashram": "The Ashram",
+        "satsang": "Satsang",
+        "gallery": "Gallery",
+        "contact": "Contact Us",
+        "followUs": "Follow Us",
+        "navigate": "Navigation",
+        "reachUs": "Reach Us",
+        "downloadApp": "Download App",
+        "readMore": "Read More",
+        "albumSelect": "Select",
+        "listenYT": "Listen on Youtube",
+        "listenSP": "Listen on Spotify",
+        "follow": "Follow",
+        "subscribe": "Subscribe",
+        "dailySatsang": "Daily Satsang",
+        "alsoAvailableAt": "Also Available At"
+    },
+    "pages": {
+        "home": "Home",
+        "ashram": "Ashram",
+        "satsang": "Satsang",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "privacy": "Privacy"
+    },
+    "footer": {
+        "privacy": "Privacy Policy",
+        "dev": "Developed By",
+        "devName": "Rudra Roy",
+        "devLink": "https://github.com/astrarudra/sadhan-sangha",
+        "startYear": 2005,
+        "cc": "Sadhan Sangha Ashram. All Rights Reserved."
+    },
+    "socialNames": {
+        "fb": {"n": "Facebook", "n2": "FB"},
+        "yt": {"n": "Youtube", "n2": "YT"},
+        "sp": {"n": "Spotify", "n2": "SP"},
+        "ap": {"n": "Amazon Music", "n2": "Music"}
+    },
+    "ashramShort": "Welcome to Sadhan Sangha Ashram, a sanctuary of peace and spiritual enlightenment.  Discover the timeless wisdom and serene beauty of our Ashram, where seekers find solace, guidance, and inner transformation.  Explore further to embark on a journey of spiritual discovery with us.",
+    "satsangShort": "Discover Divine Insights at Sadhan Sangha Ashram.  Unveil the treasures of spiritual wisdom and tranquility within the sacred confines of Sadhan Sangha Ashram, where the luminous teachings of Guruji illuminate the path to enlightenment.  Dive deeper into the spiritual journey with our extensive collection of soul-stirring satsangs from Guruji.",
+    "ashram": "**Discover Divine Insights at Sadhan Sangha Ashram**    Welcome to Sadhan Sangha Ashram, a sanctuary where spiritual wisdom and tranquility converge. Nestled between the sacred towns of Rishikesh and Haridwar, our Ashram offers a serene environment for seekers to immerse themselves in the teachings of Yogi 108 Swami Sachchidananda Saraswati.    **Our Journey**    In 1970, the revered Swami Sachchidananda Saraswati embarked on a pilgrimage through North India. Enchanted by the celestial beauty of the region between Haridwar and Rishikesh, he felt a profound connection to the divine essence, envisioning it as the abode of Lord Shiva. Inspired by this divine encounter, he resolved to establish Sadhan Sangha Ashram near the Virbhadra railway station, with the support of his devoted disciples, Choudhury Saheb and Kapoor Saheb.    **Humble Beginnings**    The Ashram's journey began in 1979 with a humble cottage and a solitary well. Over the years, with unwavering dedication and divine grace, the Ashram has blossomed into a sanctuary of spiritual nourishment and inner peace. In 1984, a significant milestone was achieved with the consecration of the Mandir within the Ashram. The unveiling of Guruji's statue on November 2nd symbolized the eternal presence of wisdom and enlightenment within these hallowed grounds.    **Satsangs and Teachings**    At Sadhan Sangha Ashram, the transformative power of satsangs forms the core of our spiritual practice. Guruji's luminous teachings illuminate the path to enlightenment, guiding seekers toward self-discovery and inner awakening. Each satsang is an opportunity to delve deep into the ocean of spiritual wisdom, offering profound insights that resonate with the soul.    **A Haven for Seekers**    Today, under the guidance of the present Guruji, Shri Achyut Chetan Maharaj, Sadhan Sangha Ashram continues to illuminate the path of seekers from all walks of life. Whether you seek refuge, wisdom, or solace amidst the chaos of life, our Ashram provides a haven for spiritual growth and self-discovery. The gates of Sadhan Sangha Ashram stand open, welcoming all who yearn for the serenity of the soul.    **Join Us**    We invite you to join us on this sacred journey. Explore our offerings of daily satsangs, enlightening discourses, and soul-stirring bhajans. Let the serenity and spiritual wisdom of Sadhan Sangha Ashram illuminate your path to inner peace and enlightenment.",
+    "satsang": "**Satsangs and Teachings**    At Sadhan Sangha Ashram, satsangs are the cornerstone of our spiritual practice, offering profound guidance and transformative insights. Each satsang session with Guruji is a journey into the depths of spiritual wisdom, focusing on the ultimate goal of enlightenment (Brahma Gyan) and the steps needed to attain it.    **Path to Enlightenment**    In his teachings, Guruji emphasizes the importance of enlightenment as the highest purpose of human life. Through his profound discourses, Guruji explains how enlightenment is not just a distant goal but a tangible state of being that we can work towards in our daily lives. He elucidates the concept of Brahma Gyan, the knowledge of the ultimate reality, and provides practical guidance on how to pursue this path.    **The Role of Meditation**    Meditation is a central theme in Guruji's teachings. According to Guruji, meditation is the key to purifying the mind and eliminating negative thoughts. Through regular meditation practice, we can achieve a state of inner peace and clarity, essential for spiritual growth. Guruji provides practical techniques and tips for meditation, making it accessible for everyone, regardless of their experience level.    **Living a Good Life**    Guruji's satsangs also offer invaluable advice on how to live a good and stress-free life. He teaches us how to cultivate positive qualities, manage stress, and maintain a balanced life. By following Guruji's guidance, we learn to navigate the challenges of life with grace and resilience, fostering a sense of well-being and contentment.    **Transformative Power of Satsangs**    Each satsang is a transformative experience, providing attendees with the tools and knowledge needed to embark on their spiritual journey. The luminous teachings of Guruji illuminate the path to self-discovery and inner awakening, offering profound insights that resonate deeply with the soul.",
+    "gallery": "Welcome to the Gallery page of Sadhan Sangha Ashram, a treasure trove of captured moments and divine memories. Explore our collection of photographs featuring Guruji and the serene landscapes of our Ashram, all lovingly clicked by devoted souls like you. Each image is a testament to the sacred journey we share together on the path of spirituality and inner awakening. Your feedback matters to us; if you believe an image should be removed, kindly drop us an email.    Select an album below to immerse yourself in the beauty and serenity of Sadhan Sangha Ashram.  Click a picture to view it in full size and high quality."
+}

@@ -7,6 +7,7 @@ import Satsang from './pages/Satsang';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
+import { Box } from '@mui/material';
 
 const componentMap = {
   Home,
@@ -18,14 +19,14 @@ const componentMap = {
 };
 
 const App = () => {
-  const [ pages ] = useStore((s) => [s.pages]);
-
+  const [ pages, loaded ] = useStore((s) => [s.pages, s.loaded]);
+  if(!loaded) return null;
   return (
     <div className="page">
       <Switch>
         {Object.keys(pages).map((key) => {
           const page = pages[key]
-          return <Route key={page.path} path={page.path} component={componentMap[page.name]} />
+          return <Route key={page.path} path={page.path} component={componentMap[page.component]} />
         })}
         <Route path="/" component={Home} />
       </Switch>
