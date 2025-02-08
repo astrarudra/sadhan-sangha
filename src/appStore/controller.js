@@ -42,8 +42,8 @@ export const Controller = {
         const { version } = await Oxy.getGist(GIST.version)
         console.log("[APPLOAD] Loading Version - ", version)
         const [config, lang] = await Promise.all([
-            Oxy.getGit(version, GIT.config), 
-            Oxy.getGit(version, GIT.english)
+            Oxy.getGit(GIT.config), 
+            Oxy.getGit(GIT.english)
         ])
         config.version = version
         saveStateBulk({ [LOCALSTORE.config]: config, [LOCALSTORE.en]: lang })
