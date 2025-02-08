@@ -34,7 +34,7 @@ export const Controller = {
         else {
             setPageNames(lang.pages)
             setState({ config: formatConfig(config), texts: lang, loaded: true, version: config.version})
-            // Controller.syncVersion()
+            Controller.syncVersion()
             return {status: 'Loaded from Local Storage'}
         }
     },
