@@ -3,7 +3,7 @@ import api from './OxyAPI'
 const Oxy = {
     global: {},
     getGist: (gist, useCache = false) => api.getGist(gist, useCache),
-    getGit: (version, path) => api.getGit(version, path)
+    getGit: (path) => api.getGit(path)
 }
 
 export default Oxy

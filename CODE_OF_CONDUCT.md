@@ -84,9 +84,9 @@ To ensure consistency and quality across the codebase, please adhere to the foll
 5.  **Gallery**
     
     -   Setup `react-grid-gallery` and `react-image-lightbox` for the gallery.
-    -   Implemented Imgur integration with a component built on top of the grid view for thumbnails and full-resolution images on click.
+    -   Implemented github static image integration with a component built on top of the grid view for thumbnails and full-resolution images on click.
     -   Developed an Album Component to allow switching between albums.
-    -   Created a script to generate Imgur keys data structure with height and width.
+    -   Created a script to generate image keys data structure with height and width.
     -   Implemented a Dynamic Grid with rows based on the neighboring div’s height.
 6.  **Configuration** - Created `config.json` in the assets folder to manage YouTube Playlist and Gallery settings.
     

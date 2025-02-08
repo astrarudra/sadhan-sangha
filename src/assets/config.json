@@ -1,81 +1,82 @@
+
 {
-    "version": 1.0,
-    "CONSTS": {
-        "ytPList": "https://youtube.com/playlist?list=",
-        "ytEmbed": "https://youtube.com/embed/",
-        "imgurBase": "https://i.imgur.com/",
-        "spotifyPL": "https://open.spotify.com/embed/show/2ZObyJtMT9202nOOIazkmv?utm_source=generator&theme=0",
-        "spotifyPLTitle": "Spotify Satsang Playlist"
-    },
-    "primaryImgs": {
-        "guruji":{
-          "src":"ZJjJmFy.jpg",
-          "alt":"Guruji",
-          "width":335,
-          "ratio":1.29,
-          "bg":"radial-gradient(circle, rgba(252,192,156,1) 40%, rgba(200,57,61,1) 80%)"
-        },
-        "boroGuruji":{
-          "src":"bDYaUzj.jpg",
-          "alt":"Param Guruji",
-          "width":355,
-          "ratio":1.29,
-          "bg":"radial-gradient(circle, #ffe8e8 20%, #af2a84 80%)"
-        },
-        "mataji":{
-          "src":"FvHmucT.jpg",
-          "alt":"Mataji",
-          "width":310,
-          "ratio":1.29,
-          "bg":"radial-gradient(circle, #d5562e 40%, #ffb5c2 80%)"
-        },
-        "ashram":{
-          "src":"6mtCET0.jpg",
-          "alt":"Ashram",
-          "width":1000,
-          "ratio":0.57,
-          "bg":"linear-gradient(180deg, #ffffff 0%, #a14a4c 70%)"
-        },
-        "bwGuruji":{
-          "src":"Z6TyTjK.png",
-          "alt":"Guruji Transparent"
-        },
-        "shiva":{
-          "src":"FWqdf8z.png",
-          "alt":"Shiva"
-        }
-    },
-    "contactDetails": {
-        "location": "Sadhan Sangha Ashram, Haridwar Road, Veerbhadra, Rishikesh, Uttarakhand 249202",
-        "gmap": "https://maps.app.goo.gl/fmuSMohkJcgPf7YR7",
-        "phone": "+91 135 2452522", 
-        "email": "contact@sadhansangha.org",
-        "gmapEmbed": "https://google.com/maps/embed?pb=!1m14!1m8!1m3!1d6905.53012522406!2d78.2485447!3d30.0722681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093f52f2fccf5d%3A0x800ed8e1721cf8c6!2sSadhan%20Sangha%20Ashram!5e0!3m2!1sen!2sin!4v1715953540617!5m2!1sen!2sin",
-        "gmapEmbedTitle": "Saghan Sangha Ashram Location Google Map"
-    },
-    "socialLinks": {
-        "fb": {"i": "logos:facebook", "l": "https://facebook.com/SadhanSangha"},
-        "yt": {"i": "logos:youtube-icon", "l": "https://youtube.com/@SadhanSangha"},
-        "sp": {"i": "logos:spotify-icon", "l": "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
-        "ap": {"i": "simple-icons:prime", "l":"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
-    },
-    "gallery": {
-        "albums": {
-            "guruji": { "value": "Guruji"},
-            "ashram": { "value": "Ashram"}
-        },
-        "guruji": [{"i":"jczFxcu.jpg","h":640,"w":296},{"i":"V9o5tVZ.jpg","h":640,"w":296},{"i":"FHwykZx.jpg","h":480,"w":640},{"i":"ZfdJmZR.jpg","h":480,"w":640},{"i":"7naNQNB.jpg","h":360,"w":640},{"i":"dx3f0Os.jpg","h":360,"w":640},{"i":"0qL7UA7.jpg","h":640,"w":296},{"i":"9uxlAHJ.jpg","h":640,"w":480},{"i":"ikx6A8d.jpg","h":480,"w":640},{"i":"n03Qq1v.jpg","h":296,"w":640},{"i":"OeFMqqS.jpg","h":479,"w":640},{"i":"JY2ig4q.jpg","h":640,"w":481},{"i":"FfKlwUe.jpg","h":640,"w":296},{"i":"DZIeAgS.jpg","h":480,"w":640},{"i":"zVZEvJi.jpg","h":296,"w":640},{"i":"pZu6dcV.jpg","h":480,"w":640},{"i":"cPFCpLx.jpg","h":640,"w":296},{"i":"i7k6aaY.jpg","h":479,"w":640}, {"i":"orDhrca.jpg","h":640,"w":431},{"i":"T3JVUkC.jpg","h":520,"w":640},{"i":"VuHQwdn.jpg","h":480,"w":640},{"i":"SQMaf83.jpg","h":640,"w":482},{"i":"QuCsKXX.jpg","h":640,"w":593},{"i":"BuysP0T.jpg","h":640,"w":542},{"i":"suHieWg.jpg","h":427,"w":640},{"i":"D0lyX7I.jpg","h":480,"w":640},{"i":"kDAv1Aw.jpg","h":640,"w":502},{"i":"IqExQjF.jpg","h":640,"w":480},{"i":"yAvBAHT.jpg","h":640,"w":480},{"i":"rNlIjWN.jpg","h":640,"w":480},{"i":"j1xkXbo.jpg","h":640,"w":480},{"i":"FFHOr60.jpg","h":640,"w":480},{"i":"mLkr2aH.jpg","h":640,"w":429},{"i":"dSk6WFk.jpg","h":640,"w":480},{"i":"SHVhAGZ.jpg","h":428,"w":640},{"i":"ixHjImq.jpg","h":640,"w":480},{"i":"B0xcyye.jpg","h":428,"w":640},{"i":"12dvFLe.jpg","h":640,"w":480},{"i":"UrtrSHZ.jpg","h":640,"w":480},{"i":"gbmjpYw.jpg","h":436,"w":640},{"i":"FdOfWho.jpg","h":427,"w":640},{"i":"GdAWDO9.jpg","h":427,"w":640},{"i":"M2hzClt.jpg","h":640,"w":480},{"i":"tXR9dgk.jpg","h":427,"w":640},{"i":"PvcyLnx.jpg","h":640,"w":480},{"i":"KQRsOV3.jpg","h":640,"w":482},{"i":"UhIPgHE.jpg","h":640,"w":482},{"i":"ayUdhYT.jpg","h":594,"w":640},{"i":"ioMdzqT.jpg","h":582,"w":640},{"i":"gKK5r3J.jpg","h":640,"w":482},{"i":"fxGIqWl.jpg","h":640,"w":519},{"i":"HZ1c6wx.jpg","h":640,"w":427},{"i":"w9kCaaX.jpg","h":640,"w":427},{"i":"pDKCscy.jpg","h":427,"w":640},{"i":"Yt8BemL.jpg","h":640,"w":427},{"i":"DY1M9KK.jpg","h":640,"w":427},{"i":"cqVOwb3.jpg","h":425,"w":640}],
-        "ashram": [{"i":"nq4dnno.jpg","h":396,"w":640},{"i":"iHTEf6M.jpg","h":480,"w":640},{"i":"gH9U5L8.jpg","h":640,"w":480},{"i":"WTkuMAc.jpg","h":480,"w":640},{"i":"Qiyck6J.jpg","h":480,"w":640},{"i":"exmQxKL.jpg","h":480,"w":640},{"i":"spRRsHZ.jpg","h":640,"w":480},{"i":"h92QQtq.jpg","h":640,"w":480},{"i":"JsDAteW.jpg","h":640,"w":480},{"i":"OZZHkxU.jpg","h":640,"w":480},{"i":"sBAwpBk.jpg","h":640,"w":480},{"i":"ZMrS24h.jpg","h":640,"w":480},{"i":"9M0kptR.jpg","h":640,"w":480},{"i":"nWRxydF.jpg","h":640,"w":480},{"i":"hx3TpbM.jpg","h":480,"w":640}]
-    },
-    "yt": {
-        "channel": "@SadhanSangha",
-        "podcast": "videoseries?list=PL_MOImlZCzxj05BtkOrCvyrhHOnQVU1o-",
-        "satsangHeaderVid": "srn9_-36LBI?start=645",
-        "playlists": [
-            {"l": "PL_MOImlZCzxhQWEq9STDkIe7uN1Vtds37","t": "Satsangs - 2024 Jan & Feb","st": "'24 Jan & Feb"}, 
-            {"l": "PL_MOImlZCzxgSBU41EgwAcHPiw9Q1hELN-","t": "Satsangs - 2024 March","st": "'24 March"}, 
-            {"l": "PL_MOImlZCzxhDJK6B_AIr28WySa9IBQB2","t": "Satsangs - 2024 April","st": "'24 April"}, 
-            {"l": "PL_MOImlZCzxgJizOTtxU94xqssA9eZmS5","t": "Satsangs - 2024 May","st": "'24 May"}
-        ]
-    }
+  "version": 1.1,
+  "CONSTS": {
+      "ytPList": "https://youtube.com/playlist?list=",
+      "ytEmbed": "https://youtube.com/embed/",
+      "gitAssetBase": "https://astrarudra.github.io/ssa-static/prod/assets/",
+      "spotifyPL": "https://open.spotify.com/embed/show/2ZObyJtMT9202nOOIazkmv?utm_source=generator&theme=0",
+      "spotifyPLTitle": "Spotify Satsang Playlist"
+  },
+  "primaryImgs": {
+      "guruji":{
+        "src":"guruji.jpg",
+        "alt":"Guruji",
+        "width":335,
+        "ratio":1.29,
+        "bg":"radial-gradient(circle, rgba(252,192,156,1) 40%, rgba(200,57,61,1) 80%)"
+      },
+      "boroGuruji":{
+        "src":"BoroGuruji.jpg",
+        "alt":"Param Guruji",
+        "width":355,
+        "ratio":1.29,
+        "bg":"radial-gradient(circle, #ffe8e8 20%, #af2a84 80%)"
+      },
+      "mataji":{
+        "src":"mataji.jpg",
+        "alt":"Mataji",
+        "width":310,
+        "ratio":1.29,
+        "bg":"radial-gradient(circle, #d5562e 40%, #ffb5c2 80%)"
+      },
+      "ashram":{
+        "src":"ashram.jpg",
+        "alt":"Ashram",
+        "width":1000,
+        "ratio":0.57,
+        "bg":"linear-gradient(180deg, #ffffff 0%, #a14a4c 70%)"
+      },
+      "bwGuruji":{
+        "src":"bw.png",
+        "alt":"Guruji Transparent"
+      },
+      "shiva":{
+        "src":"shiva.png",
+        "alt":"Shiva"
+      }
+  },
+  "contactDetails": {
+      "location": "Sadhan Sangha Ashram, Haridwar Road, Veerbhadra, Rishikesh, Uttarakhand 249202",
+      "gmap": "https://maps.app.goo.gl/fmuSMohkJcgPf7YR7",
+      "phone": "+91 135 2452522", 
+      "email": "contact@sadhansangha.org",
+      "gmapEmbed": "https://google.com/maps/embed?pb=!1m14!1m8!1m3!1d6905.53012522406!2d78.2485447!3d30.0722681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093f52f2fccf5d%3A0x800ed8e1721cf8c6!2sSadhan%20Sangha%20Ashram!5e0!3m2!1sen!2sin!4v1715953540617!5m2!1sen!2sin",
+      "gmapEmbedTitle": "Saghan Sangha Ashram Location Google Map"
+  },
+  "socialLinks": {
+      "fb": {"i": "logos:facebook", "l": "https://facebook.com/SadhanSangha"},
+      "yt": {"i": "logos:youtube-icon", "l": "https://youtube.com/@SadhanSangha"},
+      "sp": {"i": "logos:spotify-icon", "l": "https://open.spotify.com/show/2ZObyJtMT9202nOOIazkmv"},
+      "ap": {"i": "simple-icons:prime", "l":"https://music.amazon.in/podcasts/4e808bb9-cbf0-4fd8-8d83-b0c16e67980b"}
+  },
+  "gallery": {
+      "albums": {
+          "guruji": { "value": "Guruji", "path": "albums/guruji/" },
+          "ashram": { "value": "Ashram", "path": "albums/ashram/" }
+      },
+      "guruji": [{"i":"1.jpg","h":480,"w":640},{"i":"2.jpg","h":480,"w":640},{"i":"3.jpg","h":480,"w":640},{"i":"4.jpg","h":520,"w":640},{"i":"5.jpg","h":640,"w":480},{"i":"6.jpg","h":640,"w":480},{"i":"7.jpg","h":407,"w":640},{"i":"8.jpg","h":427,"w":640},{"i":"9.jpg","h":640,"w":482},{"i":"10.jpg","h":640,"w":431},{"i":"11.jpg","h":640,"w":480},{"i":"12.jpg","h":640,"w":502},{"i":"13.jpg","h":640,"w":593},{"i":"14.jpg","h":640,"w":480},{"i":"15.jpg","h":640,"w":480},{"i":"16.jpg","h":640,"w":480},{"i":"17.jpg","h":640,"w":480},{"i":"18.jpg","h":480,"w":640},{"i":"19.jpg","h":640,"w":480},{"i":"20.jpg","h":640,"w":480},{"i":"21.jpg","h":640,"w":480},{"i":"22.jpg","h":640,"w":480},{"i":"23.jpg","h":640,"w":480},{"i":"24.jpg","h":640,"w":480},{"i":"25.jpg","h":427,"w":640},{"i":"26.jpg","h":640,"w":429},{"i":"27.jpg","h":428,"w":640},{"i":"28.jpg","h":428,"w":640},{"i":"29.jpg","h":640,"w":480},{"i":"30.jpg","h":594,"w":640},{"i":"31.jpg","h":436,"w":640},{"i":"32.jpg","h":427,"w":640},{"i":"33.jpg","h":427,"w":640},{"i":"34.jpg","h":427,"w":640},{"i":"35.jpg","h":640,"w":427},{"i":"36.jpg","h":480,"w":640},{"i":"37.jpg","h":640,"w":519},{"i":"38.jpg","h":640,"w":427},{"i":"39.jpg","h":640,"w":427},{"i":"40.jpg","h":640,"w":485},{"i":"41.jpg","h":640,"w":480},{"i":"42.jpg","h":480,"w":640},{"i":"43.jpg","h":640,"w":481},{"i":"44.jpg","h":360,"w":640},{"i":"45.jpg","h":360,"w":640},{"i":"46.jpg","h":640,"w":296},{"i":"47.jpg","h":640,"w":296},{"i":"48.jpg","h":640,"w":296},{"i":"49.jpg","h":640,"w":296},{"i":"50.jpg","h":640,"w":296},{"i":"51.jpg","h":640,"w":296},{"i":"52.jpg","h":296,"w":640},{"i":"53.jpg","h":296,"w":640},{"i":"54.jpg","h":296,"w":640},{"i":"55.jpg","h":296,"w":640},{"i":"56.jpg","h":640,"w":296},{"i":"57.jpg","h":640,"w":296},{"i":"58.jpg","h":640,"w":296},{"i":"59.jpg","h":640,"w":482},{"i":"60.jpg","h":582,"w":640},{"i":"61.jpg","h":640,"w":296},{"i":"62.jpg","h":640,"w":296},{"i":"63.jpg","h":640,"w":296},{"i":"64.jpg","h":640,"w":482},{"i":"65.jpg","h":640,"w":296},{"i":"66.jpg","h":640,"w":296},{"i":"67.jpg","h":640,"w":296},{"i":"68.jpg","h":640,"w":296},{"i":"69.jpg","h":640,"w":296},{"i":"70.jpg","h":640,"w":296},{"i":"71.jpg","h":640,"w":482},{"i":"72.jpg","h":640,"w":482},{"i":"73.jpg","h":640,"w":480},{"i":"74.jpg","h":640,"w":296},{"i":"75.jpg","h":640,"w":296},{"i":"76.jpg","h":640,"w":427},{"i":"77.jpg","h":640,"w":579},{"i":"78.jpg","h":640,"w":640},{"i":"79.jpg","h":640,"w":640},{"i":"80.jpg","h":479,"w":640},{"i":"81.jpg","h":479,"w":640},{"i":"82.jpg","h":425,"w":640},{"i":"83.jpg","h":640,"w":503},{"i":"84.jpg","h":640,"w":427},{"i":"85.jpg","h":640,"w":480},{"i":"86.jpg","h":480,"w":640},{"i":"87.jpg","h":640,"w":415}],
+      "ashram": [{"i":"1.jpg","h":396,"w":640},{"i":"2.jpg","h":640,"w":480},{"i":"3.jpg","h":640,"w":480},{"i":"4.jpg","h":480,"w":640},{"i":"5.jpg","h":480,"w":640},{"i":"6.jpg","h":480,"w":640},{"i":"7.jpg","h":480,"w":640},{"i":"8.jpg","h":480,"w":640},{"i":"9.jpg","h":480,"w":640},{"i":"10.jpg","h":640,"w":480},{"i":"11.jpg","h":640,"w":480},{"i":"12.jpg","h":640,"w":480},{"i":"13.jpg","h":640,"w":480},{"i":"14.jpg","h":640,"w":480},{"i":"15.jpg","h":640,"w":480},{"i":"16.jpg","h":640,"w":480}]
+  },
+  "yt": {
+      "channel": "@SadhanSangha",
+      "podcast": "videoseries?list=PL_MOImlZCzxj05BtkOrCvyrhHOnQVU1o-",
+      "satsangHeaderVid": "srn9_-36LBI?start=645",
+      "playlists": [
+          {"l": "PL_MOImlZCzxhQWEq9STDkIe7uN1Vtds37","t": "Satsangs - 2024 Jan & Feb","st": "'24 Jan & Feb"}, 
+          {"l": "PL_MOImlZCzxgSBU41EgwAcHPiw9Q1hELN-","t": "Satsangs - 2024 March","st": "'24 March"}, 
+          {"l": "PL_MOImlZCzxhDJK6B_AIr28WySa9IBQB2","t": "Satsangs - 2024 April","st": "'24 April"}, 
+          {"l": "PL_MOImlZCzxgJizOTtxU94xqssA9eZmS5","t": "Satsangs - 2024 May","st": "'24 May"}
+      ]
+  }
 }

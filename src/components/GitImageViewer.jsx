@@ -2,23 +2,23 @@ import { useState } from 'react';
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-import { imgurBase } from '../constants';
+import { gitAssetBase } from '../constants';
 import ImgLazy from './ImgLazy';
 
-const formatImages = (imgurUUIDs, sort) => {
+const formatImages = (imgurUUIDs, path, sort) => {
     const images = imgurUUIDs.map(img => {
         const {i , h:height , w: width} = img
         const [key, ext] = i.split('.')
-        const src = `${imgurBase}${key}l.${ext}` // thumbnail
-        const original = `${imgurBase}${i}`
+        const src = `${gitAssetBase}${path}${key}t.${ext}` // thumbnail
+        const original = `${gitAssetBase}${path}${i}`
         return { src, original, height, width }
     })
     if(sort) images.sort((a, b) => a.height - b.height);
     return images;
 }
 
-const ImgurViewer = ({images: imgurUUIDs, sort=true, ...props}) => {
-    const images = formatImages(imgurUUIDs, sort);
+const GitImageViewer = ({images: imgurUUIDs, path, sort=true, ...props}) => {
+    const images = formatImages(imgurUUIDs, path, sort);
     const [index, setIndex] = useState(-1);
     const currentImage = images[index];
     const nextIndex = (index + 1) % images.length;
@@ -57,4 +57,4 @@ const ImgurViewer = ({images: imgurUUIDs, sort=true, ...props}) => {
     </div>
 }
 
-export default ImgurViewer;
+export default GitImageViewer;
