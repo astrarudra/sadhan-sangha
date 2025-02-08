@@ -1,23 +1,160 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Logs
+logs/
+*.log
+*.log.*
 
-# testing
-/coverage
+# Dependency directories
+jspm_packages/
 
-# production
-/build
+# Optional npm cache directory
+.npm
 
-# misc
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+
+# MacOS
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.config/
+.yardoc
+_yardoc/
+.rvmrc
+.rvm/
+.rbenv-version
+.rbenv-gemsets
+.ruby-version
+.ruby-gemset
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Rust
+*.rlib
+Cargo.lock
+
+# Haskell
+*.hi
+*.dyn_hi
+*.dyn_o
+
+# Swift
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+*.xcuserdata/
+*.xcscheme
+*.xcschememanagement.plist
+
+# C++
+*.o
+*.obj
+*.gch
+*.pch
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+
+# C#
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.log
+*.userprefs
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+*.svg
+*.psd
+*.xcf
+
+# Audio
+*.mp3
+*.ogg
+*.flac
+*.wav
+
+# Video
+*.mp4
+*.avi
+*.mkv
+*.flv
+*.mov
+*.wmv
+
+# Documents
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
