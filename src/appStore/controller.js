@@ -3,20 +3,20 @@ import Oxy from "../oxy"
 import { loadStateBulk, saveStateBulk } from "./localStorage";
 import { useStore } from "./store";
 // import lang from '../assets/en.json'
-// import bn from '../assets/bn.json'
+// import config from '../assets/config.json'
 const { setState, setData, setPageNames } = useStore.getState()
 
 const formatConfig = (configJson) => {
     const {  CONSTS, gallery, primaryImgs } = configJson
     const { albums } = gallery;
-    const { imgurBase,  } = CONSTS;
+    const { gitAssetBase  } = CONSTS;
     Object.keys(albums).forEach((key) => {
       albums[key].key = key;
     })
     Object.keys(primaryImgs).forEach(key => {
         const i = primaryImgs[key]
         i.key = key
-        i.src = imgurBase + i.src;
+        i.src = gitAssetBase + i.src;
         i.alt = i.alt + " - " + siteTitle
         if(i.ratio) i.height = i.width * i.ratio;
     })
@@ -34,7 +34,7 @@ export const Controller = {
         else {
             setPageNames(lang.pages)
             setState({ config: formatConfig(config), texts: lang, loaded: true, version: config.version})
-            Controller.syncVersion()
+            // Controller.syncVersion()
             return {status: 'Loaded from Local Storage'}
         }
     },

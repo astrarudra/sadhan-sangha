@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ImgurViewer from '../components/ImgurViewer';
+import GitImageViewer from '../components/GitImageViewer';
 import { useStore } from '../appStore';
 import { ToggleButtons } from '../components/ToggleButtons';
 import { SSALogoIcon, ResponsiveElement, SSADivider, BoxFixedWidth, Md } from '../components/UIElements';
@@ -33,7 +33,7 @@ const GalleryPage = () => {
                     <Typography sx={{fontWeight: "bold", padding: "0px 15px"}}>{headers.albumSelect}</Typography>
                     <ToggleButtons label="SSA Albums" list={Object.values(albums)} selected={album.key} onChange={(userSelect) => setAlbum(albums[userSelect])} />
                 </div>
-                <ImgurViewer images={gallery[album.key]}/>
+                <GitImageViewer images={gallery[album.key]} path={album.path}/>
             <SSADivider />
         </div>
     );

@@ -18,11 +18,11 @@ For Release Notes & Coding Standards:
 
 Here is a demo video of the website:
 
-[![Watch the demo video of the Sadhan Sangha Ashram Website](https://i.imgur.com/y9Kxd2ql.jpg)](https://www.youtube.com/watch?v=0xnJCDfNvfc)
+[![Watch the demo video of the Sadhan Sangha Ashram Website](https://astrarudra.github.io/ssa-static/prod/assets/ytthumb.jpg)](https://www.youtube.com/watch?v=0xnJCDfNvfc)
 
 Screenshot:
 
-![Screenshot of the Sadhan Sangha Ashram Website](https://i.imgur.com/KsqCBDW.jpg)
+![Screenshot of the Sadhan Sangha Ashram Website](https://astrarudra.github.io/ssa-static/prod/assets/sitess.jpg)
 
 ## About Sadhan Sangha Ashram
 Sadhan Sangha Ashram is a sanctuary of peace and spiritual enlightenment nestled between Rishikesh and Haridwar. The Ashram offers a serene environment for seekers to immerse themselves in the teachings of Yogi 108 Swami Sachchidananda Saraswati.
@@ -51,7 +51,6 @@ The website is completely open-source. Feel free to use this repository for lear
 ### Hosting
 We thank the following for free hosting<br><br>
 ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
-![Imgur](https://a11ybadges.com/badge?logo=imgur)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)

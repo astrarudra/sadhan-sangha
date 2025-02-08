@@ -4,7 +4,7 @@ import { FollowUsSection } from '../components/HomeSections'
 import { SSADivider, BoxFixedWidth, Md } from '../components/UIElements';
 import { useStore } from '../appStore';
 import Button from '@mui/material/Button';
-import ImgurViewer from '../components/ImgurViewer';
+import GitImageViewer from '../components/GitImageViewer';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Link } from 'react-router-dom';
 
@@ -13,10 +13,11 @@ const calcMaxRows = (clientHeight) => {
 }
 
 const DynamicGallery = ({gallery, albums, maxRows, width}) => {
+    console.log("CHECK HERE - ", gallery, albums)
     const style = width ? { maxWidth: width - 40 + "px" } : { paddingRight: "20px", overflow: "auto"}
     return <div className="f1" style={style}>
         <div>
-            <ImgurViewer images={gallery[albums.ashram.key]} maxRows={maxRows} rowHeight={250} sort={false}/>
+            <GitImageViewer images={gallery[albums.ashram.key]} path={albums.ashram.path} maxRows={maxRows} rowHeight={250} sort={false}/>
         </div>
         <div style={{ textAlign: 'center', paddingTop: "15px"}}>
             <Link to={'/gallery'} style={{textDecoration: "none", color: "inherit"}}>

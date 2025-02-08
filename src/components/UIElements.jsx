@@ -15,7 +15,7 @@ export const SSALogoIcon = ({variant = 'variant-brown', sx}) => {
 
 export const InitLoader = ({ className="d-center fs", text="Loading"}) => (<div className={className} style={{color: '#f3d9c3'}}>
   <div style={{margin: "10px"}}>
-    <img src="https://i.imgur.com/HQ4lLtk.png" alt="Sadhan Sangha Ashram Logo" width="300px" height="300px" />
+    <img src="https://astrarudra.github.io/ssa-static/prod/assets/logo.png" alt="Sadhan Sangha Ashram Logo" width="300px" height="300px" />
     <h1>{text}</h1>
     <div className="h-center" style={{margin: '5px'}}>
       <div className="loader"></div>

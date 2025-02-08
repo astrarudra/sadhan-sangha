@@ -1,8 +1,7 @@
 export const drawerWidth = 240;
 export const siteTitle = 'Sadhan Sangha Ashram'
-export const HTTPS = 'HTTPS://'
-export const imgurBase = `${HTTPS}i.imgur.com/`
-export const SSALogoPNG =  imgurBase + 'HQ4lLtk.png'
+export const HTTPS = 'https://'
+export const gitAssetBase = `${HTTPS}astrarudra.github.io/ssa-static/prod/assets/`
 export const LOCALSTORE = {
     config: 'ssaConfig',
     en: 'ssaEn',
